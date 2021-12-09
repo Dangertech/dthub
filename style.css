@@ -1,0 +1,23 @@
+:root
+{
+	--main-bg-color: #1c1a26;
+	--main-text-color: #989fc1;
+}
+.marginauto 
+{
+	margin: 10px auto 25px;
+	display: block;
+}
+a:link
+{
+	color: lightgreen;
+}
+a:visited
+{
+	color: green;
+}
+body
+{
+	color: var(--main-text-color);
+	background-color: var(--main-bg-color);
+}
