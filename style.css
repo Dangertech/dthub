@@ -1,23 +1,72 @@
 :root
 {
-	--main-bg-color: #1c1a26;
+	--main-bg-color: #0d0016;
 	--main-text-color: #989fc1;
+	--glow-accent-color: #dcb300;
+	--glow-hover-color: #ddd500;
 }
-.marginauto 
+img.marginauto 
 {
 	margin: 10px auto 25px;
 	display: block;
 }
-a:link
-{
-	color: lightgreen;
-}
-a:visited
-{
-	color: green;
-}
+
+
+
 body
 {
 	color: var(--main-text-color);
 	background-color: var(--main-bg-color);
+	/*background-image: url("source_imgs/background.png");*/
+}
+
+.center
+{
+	margin-left: 5cm;
+	margin-right: 5cm;
+}
+
+
+/* Make text Glowing */
+gl
+{
+	color: var(--glow-accent-color);
+	font-style: normal;
+	text-shadow: 0 0 5px var(--glow-accent-color);
+	transition: 0.3s;
+}
+gl:hover
+{
+	color: var(--glow-hover-color);
+	font-style: normal;
+	text-shadow: 0 0 6px var(--glow-hover-color);
+}
+
+
+/* Headings are brighter on hover */
+h1, h2, h3, h4, h5, h6
+{
+	color: #9e1868;
+	text-shadow: 0 0 2px #9e1868;
+	transition: 0.3s;
+}
+h1.hover:hover, h2.hover:hover, h3.hover:hover, h4.hover:hover, h5.hover:hover, h6.hover:hover
+{
+	color: #ea0cba;
+	text-shadow: 0 0 6px #ea0cba;
+}
+
+a:link
+{
+	color: darkorchid;
+	transition: 0.3s;
+}
+a:visited
+{
+	color: darkmagenta;
+}
+a:hover
+{
+	color: darkorchid;
+	text-shadow: 0 0 6px darkorchid;
 }
