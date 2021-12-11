@@ -5,16 +5,22 @@
 	--glow-accent-color: #dcb300;
 	--glow-hover-color: #ddd500;
 }
+
 img.marginauto 
 {
 	margin: 10px auto 25px;
 	display: block;
+}
+img.radial-bg
+{
+	background-image: radial-gradient(purple, transparent 70%);
 }
 
 
 
 body
 {
+	font-family: "Courier New", "Lucida Console", monospace;
 	color: var(--main-text-color);
 	background-color: var(--main-bg-color);
 	/*background-image: url("source_imgs/background.png");*/
@@ -69,4 +75,9 @@ a:hover
 {
 	color: darkorchid;
 	text-shadow: 0 0 6px darkorchid;
+}
+
+ul
+{
+	list-style: "> ";
 }
