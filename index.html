@@ -3,6 +3,7 @@
 	<head>
 		<title>dthub</title>
 		<link rel="stylesheet" href="style.css">
+		<script src="logo.js" async></script>
 	</head>
 
 	<body>
@@ -134,32 +135,3 @@
 		</p>
 	</body>
 </html>
-
-<script>
-	var root = document.querySelector(':root');
-	var percentage = 50;
-	var percentageStep = 1;
-	var percentageInterval = 100;
-	var negative = false;
-	setInterval(() =>
-		{
-			if (negative == false)
-			{
-				percentage += percentageStep;
-			}
-			else
-			{
-				percentage -= percentageStep;
-			}
-			console.log("Percentage is " + percentage);
-			root.style.setProperty('--blink-percentage', percentage.toString() + '%');
-			if (percentage >= 70)
-			{
-				negative = true;
-			}
-			else if (percentage <= 50)
-			{
-				negative = false;
-			}
-		}, percentageInterval);
-</script>
