@@ -4,6 +4,7 @@
 	--main-text-color: #989fc1;
 	--glow-accent-color: #dcb300;
 	--glow-hover-color: #ddd500;
+	--blink-percentage: 0%;
 }
 
 img.marginauto 
@@ -13,8 +14,9 @@ img.marginauto
 }
 img.radial-bg
 {
-	background-image: radial-gradient(purple, transparent 70%);
+	background-image: radial-gradient(purple, transparent var(--blink-percentage));
 }
+
 
 
 
@@ -80,4 +82,20 @@ a:hover
 ul
 {
 	list-style: "> ";
+}
+
+
+/* Blinking, for example text cursor */
+.blinking
+{
+	animation:blinkingText 1s infinite;
+}
+
+@keyframes blinkingText
+{
+	0%  {color: var(--main-text-color);}
+	49% {color: transparent;}
+	50% {color: transparent;}
+	99% {color: transparent;}
+	100%{color: var(--main-text-color);}
 }

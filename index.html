@@ -127,9 +127,39 @@
 					planet, terraform at larger scale and manage multiple buildings at once.
 					Then you develop spacefaring, extending to other planets, eventually
 					conquering entire galaxies. You complete the game by building an artifact
-					that can create another universe, and create a new savefile.
+					that can create another universe, 
+					and create a new savefile.<span class="blinking">|</span>
 				</li>
 			</ul>
 		</p>
 	</body>
 </html>
+
+<script>
+	var root = document.querySelector(':root');
+	var percentage = 50;
+	var percentageStep = 1;
+	var percentageInterval = 100;
+	var negative = false;
+	setInterval(() =>
+		{
+			if (negative == false)
+			{
+				percentage += percentageStep;
+			}
+			else
+			{
+				percentage -= percentageStep;
+			}
+			console.log("Percentage is " + percentage);
+			root.style.setProperty('--blink-percentage', percentage.toString() + '%');
+			if (percentage >= 70)
+			{
+				negative = true;
+			}
+			else if (percentage <= 50)
+			{
+				negative = false;
+			}
+		}, percentageInterval);
+</script>
