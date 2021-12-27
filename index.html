@@ -74,7 +74,7 @@
 			</ul>
 		</p>
 		 
-		<h2 class="center hover"><gl>$</gl> dthub --list-ideas</h2>
+		<h2 class="center hover"><gl>$</gl> dthub --list-ideas -c</h2>
 		<p class="center">
 		I have some ideas for future projects that I might take on one day.
 		They range from quick easy program to entire videogames.
@@ -129,9 +129,52 @@
 					Then you develop spacefaring, extending to other planets, eventually
 					conquering entire galaxies. You complete the game by building an artifact
 					that can create another universe, 
-					and create a new savefile.<span class="blinking">|</span>
+					and create a new savefile.
 				</li>
 			</ul>
+		</p>
+		<h2 class="center hover"><gl>$</gl> dthub --list-ideas -p</h2>
+		<p class="center">
+		I've gotten a <a href="https://raspberrypi.org">Raspberry Pi 4 Model B</a> recently and am
+		currently collecting ideas on what to do with it. I want to use it as a server
+		and have it running 24/7, so it will probably complete data collection and web
+		scraping tasks. My ideas are pretty rough at the moment.
+		</p>
+		<ul class="center">
+			<li>
+				<gl>A simple log tracking the status of the pi 
+				and the devices I connect through</gl>
+				<br>
+				This is a must have. Important data should be saved to a file on the pi,
+				like which temperature it has, when it got disconnected from the internet
+				<span title="'For real, when our heating system doesn't work anymore, I'll blame it on that thing, no matter if it really is it's fault or not!'">
+					(my father fears this thing, so this might be very useful),
+				</span>
+				or maybe even if it crashes, but I don't know if I can get 
+				<a href="smarden.org/runit/">runit</a>
+				to do something if it fails. Also, I want to log my SSH accesses but I don't
+				see the ssh log under /var/log/auth.log?
+			</li>
+			<li>
+				<gl>A camera system with face detection</gl>
+				<br>
+				I've always wanted to play around with <a href="">OpenCV</a>. I'd simply 
+				connect a webcam to the pi and let a program run that collects the webcam
+				data, saves an image every 3 seconds or so and tries to get interesting data
+				out of it (how bright is it, are there faces/movement on the image, etc).
+				I don't know if it's a smart idea to pull that off with C++ as well, maybe
+				I'd have to use Python for that, but I like the idea to try and decode
+				the camera data through C++ by myself.
+			</li>
+		</ul>
+		<p class="center">
+		I want the pi to be able to start all it's tasks autonomously, so I don't have
+		to plug in a monitor and keyboard and start them manually every time it boots.
+		This way, I have a little box that I just have to supply with power to start it.
+		I still have to configure a static IP address for the wi-fi chip though. I'm
+		still dependent on the Ethernet connector, which IP address I know. The processes
+		could be started in <gl>/etc/rc.local</gl>, 
+		which gets executed on boot<span class="blinking">|</span>
 		</p>
 	</body>
 </html>
