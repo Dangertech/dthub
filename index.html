@@ -143,7 +143,7 @@
 		<ul class="center">
 			<li>
 				<gl>A simple log tracking the status of the pi 
-				and the devices I connect through</gl>
+				and the devices I connect to it</gl>
 				<br>
 				This is a must have. Important data should be saved to a file on the pi,
 				like which temperature it has, when it got disconnected from the internet
@@ -156,9 +156,23 @@
 				see the ssh log under /var/log/auth.log?
 			</li>
 			<li>
+				<gl>A Taskserver</gl>
+				<br>
+				I am using <a href="https://taskwarrior.org">Taskwarrior</a>, a really cool
+				and featureful CLI to-do list. They also have this project called 
+				<a href="https://taskwarrior.org/docs/taskserver/why.html">Taskserver</a>
+				which lets you, as the name suggests, set up a tool on a server that 
+				synchronizes all your tasks across all your devices. I currently do this
+				through OneDrive by just having my task folder in my OneDrive directory
+				that I sync regularly with the amazing 
+				<a href="https://github.com/abraunegg/onedrive">OneDrive CLI tool by abraunegg</a>,
+				but having a synchronization via my very own server sounds way cooler.
+			</li>
+			<li>
 				<gl>A camera system with face detection</gl>
 				<br>
-				I've always wanted to play around with <a href="">OpenCV</a>. I'd simply 
+				I've always wanted to play around with 
+				<a href="https://opencv.org">OpenCV</a>. I'd simply 
 				connect a webcam to the pi and let a program run that collects the webcam
 				data, saves an image every 3 seconds or so and tries to get interesting data
 				out of it (how bright is it, are there faces/movement on the image, etc).
