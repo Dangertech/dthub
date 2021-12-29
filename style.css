@@ -64,6 +64,7 @@ h1.hover:hover, h2.hover:hover, h3.hover:hover, h4.hover:hover, h5.hover:hover, 
 	text-shadow: 0 0 6px #ea0cba;
 }
 
+/* Link configuration */
 a:link
 {
 	color: darkorchid;
@@ -79,6 +80,7 @@ a:hover
 	text-shadow: 0 0 6px darkorchid;
 }
 
+/* Lists don't have these ugly bullets */
 ul
 {
 	list-style: "> ";
