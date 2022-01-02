@@ -4,6 +4,8 @@
 	--main-text-color: #989fc1;
 	--glow-accent-color: #dcb300;
 	--glow-hover-color: #ddd500;
+	--special-accent-color: #14a5ff;
+	--special-hover-color: #00ffff;
 	--blink-percentage: 50%;
 }
 
@@ -34,7 +36,6 @@ body
 	margin-right: 5cm;
 }
 
-
 /* Make text Glowing */
 gl
 {
@@ -49,7 +50,17 @@ gl:hover
 	font-style: normal;
 	text-shadow: 0 0 6px var(--glow-hover-color);
 }
-
+/* Special glow */
+gl.special
+{
+	color: var(--special-accent-color);
+	text-shadow: 0 0 5px var(--special-accent-color);
+}
+gl.special:hover
+{
+	color: var(--special-hover-color);
+	text-shadow: 0 0 7px var(--special-hover-color);
+}
 
 /* Headings are brighter on hover */
 h1, h2, h3, h4, h5, h6

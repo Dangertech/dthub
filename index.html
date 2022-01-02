@@ -5,39 +5,54 @@
 		<link rel="stylesheet" href="style.css">
 		<!Edits the dthub logo for the glow animation>
 		<script src="logo.js" async></script>
+		<!Adds a random quote to the "quote" id>
+		<script src="setquotes.js" async></script>
 	</head>
 
 	<body>
-		<img class="marginauto radial-bg" src="source_imgs/dthublogo.png" width=311 height=88 align="middle">
-		 
+		<div>
+			<img class="marginauto radial-bg" src="sources/dthublogo.png" width=311 height=88 align="middle">
+			<div class="center" id="quote" style="text-align: center; color: #ffffff;"></div>
+		</div>
 		<p class="center">
-			AY! Almighty one, you stumbled upon this shitty website!
-			<br> 
-			Here, in a million years, a great hub shall be created. A hub,
-			giving great innovation to a futuristic society, empowering people
-			all over the world to do whatever they want.
+			This website is a task for my CS class. I don't have any prior experience in Web Development
+			and actually never wanted to delve into it. You're just writing stuff, and making it look
+			fancy and don't actually produce tools that can help in any way. But I'm still putting
+			some time into this because a web presence could certainly be useful. It's mostly just
+			ads for myself, stuff about me and what I do.
 		</p>
 		 
-		<h2 class="center hover"><gl>$</gl> dthub --show-future</h2>
+		<h2 class="center hover"><gl>$</gl> dthub --future</h2>
 		<p class="center">
-			<img src="source_imgs/under_construction.gif" alt="I swear, I'm working so hard right now...">
+			<img src="sources/under_construction.gif" alt="I swear, I'm working so hard right now...">
 			<br>
-			Right now, you can see the only page on this website, black on white, awful to look at
-			and worse to use. Yeah, that's the 1990's style you were looking for. So we need something
-			to make'er pretty, right? <gl>Until 2022</gl>, I want the basics of <gl>CSS</gl> and 
-			maybe even <gl>JavaScript</gl> to be seared into my brain, and then, you can witness, well,
-			at least a decent website. I find the minimal, ASCII-art infused style of the 
-			<a href="https://adventofcode.com" target=_blank">AdventOfCode</a> website to be very appealing, so
-			I think I'll try to imitate that a little bit. (<s>How do you make fuggin bloom? I don't
-			think I'll manage to include that</s> I have bloom already!)
+			Right now, this website is not in a state where I'd call it done (although it looks really
+			sexy already). My teacher <gl>didn't announce a deadline yet</gl>, so I'll just fumble around
+			a bit for now. I have some things I want to implement until the time runs out:
+			<ul class="center">
+				<li>
+					A <gl>random line of text</gl> below the logo that changes upon reloading the page. 
+					A JavaScript script will run through a file with quotes and pick a random one. 
+					<gl class="special">✓ This is done!</gl>
+				</li>
+				<br>
+				<li>
+					An 
+					<a href="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.FsEwZ4GxtqHzo-UoC6QkzQHaEo%26pid%3DApi&f=1"
+					   target="_blank">
+						epic synthwave sun
+					</a> 
+					at the bottom of the page, shining up with a linear gradient. Man, I love that artstyle.
+				</li>
+			</ul>
 			<br>
-			<img src="source_imgs/under_construction.gif" alt="I swear, I'm working so hard right now...">
+			<img class="center" src="sources/under_construction.gif" alt="I swear, I'm working so hard right now...">
 		</p>
 		<h2 class="center hover"><gl>$</gl> dthub --list-projects</h2>
 		<p class="center">
 			<ul class="center">
 				<li>
-					<a href="https://github.com/Dangertech/tictactoe-ncurses" target=_blank">
+					<a href="https://github.com/Dangertech/tictactoe-ncurses" target="_blank">
 						tictactoe-ncurses
 					</a>
 					<br>
