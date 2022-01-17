@@ -21,13 +21,11 @@ img.radial-bg
 
 
 
-
 body
 {
 	font-family: "Courier New", "Lucida Console", monospace;
 	color: var(--main-text-color);
-	background-color: var(--main-bg-color);
-	/*background-image: url("source_imgs/background.png");*/
+	background-image: linear-gradient(var(--main-bg-color) 92%, orange 120%);
 }
 
 .center

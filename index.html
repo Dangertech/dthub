@@ -7,12 +7,14 @@
 		<script src="logo.js" async></script>
 		<!Adds a random quote to the "quote" id>
 		<script src="setquotes.js" async></script>
+		<!Moves the synthetik sun>
+		<script src="sun.js" async></script>
 	</head>
 
 	<body>
 		<div>
 			<img class="marginauto radial-bg" src="sources/dthublogo.png" width=311 height=88 align="middle">
-			<div class="center" id="quote" style="text-align: center; color: #ffffff;"></div>
+			<div class="center" id="quote" style="text-align: center; color: #ffffff;" onclick="setquote()"></div>
 		</div>
 		<p class="center">
 			This website is a task for my CS class. I don't have any prior experience in Web Development
@@ -43,6 +45,10 @@
 						epic synthwave sun
 					</a> 
 					at the bottom of the page, shining up with a linear gradient. Man, I love that artstyle.
+					<gl class="special">✓ This is done and it looks <i>really</i> cool. Reload the page and scroll down to see how it rises!</gl>
+				</li>
+				<li>
+					Make the <gl>SYNTHETIK SUN swoosh</gl> a bit up and down after it has risen. This is due 2021-19-1;
 				</li>
 			</ul>
 			<br>
@@ -74,7 +80,7 @@
 				</li>
 				<br>
 				<li>
-					<a href="https://github.com/Dangertech/shitty-aoc-2021" target=_blank">
+					<a href="https://github.com/Dangertech/shitty-aoc-2021" target="_blank">
 						Shitty AdventOfCode 2021
 					</a>
 					<br>
@@ -82,7 +88,7 @@
 				</li>
 				<br>
 				<li>
-					<a href="https://github.com/Dangertech/dthub" target=_blank">The code for this website</a>
+					<a href="https://github.com/Dangertech/dthub" target="_blank">The code for this website</a>
 					<br>
 					is also available on my GitHub profile. Mind you, I'm very new to web
 					development and my code might be badly organized and that JavaScript
@@ -101,7 +107,7 @@
 					<gl>Hackerman</gl>
 					<br>
 					Wanna look cool in front of everyone without having to resolve
-					to websites like <a href="https://hackertyper.net" target=_blank">
+					to websites like <a href="https://hackertyper.net" target="_blank">
 						hackertyper</a>
 					and doing it all from the comfort and speed of your terminal?
 					Hackerman wants to do all this. I imagine a system that lets you
@@ -118,7 +124,7 @@
 					have already used up, how long you still have left to live,
 					and a chart showing every week in your life you already lived,
 					inspired by 
-					<a href="https://shop-us.kurzgesagt.org/products/lifespan-calendar-poster?variant=39451596455984" target=_blank">
+					<a href="https://shop-us.kurzgesagt.org/products/lifespan-calendar-poster?variant=39451596455984" target="_blank">
 						kurzgesagt</a>.
 				</li>
 				<br>
@@ -153,7 +159,7 @@
 		</p>
 		<h2 class="center hover"><gl>$</gl> dthub --list-ideas -p</h2>
 		<p class="center">
-		I've gotten a <a href="https://raspberrypi.org" target=_blank">Raspberry Pi 4 Model B</a> recently and am
+		I've gotten a <a href="https://raspberrypi.org" target="_blank">Raspberry Pi 4 Model B</a> recently and am
 		currently collecting ideas on what to do with it. I want to use it as a server
 		and have it running 24/7, so it will probably complete data collection and web
 		scraping tasks. My ideas are pretty rough at the moment.
@@ -176,21 +182,21 @@
 			<li>
 				<gl>A Taskserver</gl>
 				<br>
-				I am using <a href="https://taskwarrior.org" target=_blank">Taskwarrior</a>, a really cool
+				I am using <a href="https://taskwarrior.org" target="_blank">Taskwarrior</a>, a really cool
 				and featureful CLI to-do list. They also have this project called 
-				<a href="https://taskwarrior.org/docs/taskserver/why.html" target=_blank">Taskserver</a>
+				<a href="https://taskwarrior.org/docs/taskserver/why.html" target="_blank">Taskserver</a>
 				which lets you, as the name suggests, set up a tool on a server that 
 				synchronizes all your tasks across all your devices. I currently do this
 				through OneDrive by just having my task folder in my OneDrive directory
 				that I sync regularly with the amazing 
-				<a href="https://github.com/abraunegg/onedrive" target=_blank">OneDrive CLI tool by abraunegg</a>,
+				<a href="https://github.com/abraunegg/onedrive" target="_blank">OneDrive CLI tool by abraunegg</a>,
 				but having a synchronization via my very own server sounds way cooler.
 			</li>
 			<li>
 				<gl>A camera system with face detection</gl>
 				<br>
 				I've always wanted to play around with 
-				<a href="https://opencv.org" target=_blank">OpenCV</a>. I'd simply 
+				<a href="https://opencv.org" target="_blank">OpenCV</a>. I'd simply 
 				connect a webcam to the pi and let a program run that collects the webcam
 				data, saves an image every 3 seconds or so and tries to get interesting data
 				out of it (how bright is it, are there faces/movement on the image, etc).
@@ -208,5 +214,7 @@
 		could be started in <gl>/etc/rc.local</gl>, 
 		which gets executed on boot<span class="blinking">|</span>
 		</p>
+		<! Set again by the sun.js script>
+		<div class="sun"></div>
 	</body>
 </html>
