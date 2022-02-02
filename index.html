@@ -33,9 +33,28 @@
 			a bit for now. I have some things I want to implement until the time runs out:
 			<ul class="center">
 				<li>
-					A <gl>random line of text</gl> below the logo that changes upon reloading the page. 
+					Add a <gl class="special">GitHub "Rich Presence"</gl> section.
+					<br>
+					I have no idea how to do this tbh, but I want a section that shows stuff like <gl>my
+					most recent commit, when and on which project it was</gl> and stuff like that, and
+					of course I want it to update automatically. I know of the 
+					<a href="https://docs.github.com/en/rest" target="_blank">GitHub REST API</a>, but
+					I don't even know what REST means and if it is <gl>even possible to make HTTP GET requests
+					on Website load</gl> (but I'm optimistic with that, JavaScript was made exactly for things
+					like that after all). Another thing to consider is the authenticity: GitHub probably
+					doesn't want random websites bombarding their servers with requests, so the 
+					idea might fail because of this. I'll see soon, I guess.
+				</li>
+				<li>
+					<gl class="special">Split up the website into multiple links</gl>
+					The website is growing, and I need to get some structure in there. Having separate
+					pages would make it easier to manage and view it but downgrade the "<i>overall experience</i>"
+					(the SYNTHETIK SUN, the gradient, etc...).
+				</li>
+				<li>
+					A <gl class="special">random line of text</gl> below the logo that changes upon reloading the page. 
 					A JavaScript script will run through a file with quotes and pick a random one. 
-					<gl class="special">✓ This is done!</gl>
+					<gl>✓ This is done!</gl>
 				</li>
 				<br>
 				<li>
@@ -45,10 +64,11 @@
 						epic synthwave sun
 					</a> 
 					at the bottom of the page, shining up with a linear gradient. Man, I love that artstyle.
-					<gl class="special">✓ This is done and it looks <i>really</i> cool. Reload the page and scroll down to see how it rises!</gl>
+					<gl>✓ This is done and it looks <i>really</i> cool. Reload the page and scroll down to see how it rises!</gl>
 				</li>
 				<li>
-					Make the <gl>SYNTHETIK SUN swoosh</gl> a bit up and down after it has risen. This is due 2021-19-1;
+					Make the <gl>SYNTHETIK SUN swoosh</gl> a bit up and down after it has risen. This is due 2021-1-19;
+					<gl>✓ This is done! *<i>swoosh</i>* "Haha!" *<i>swooooosh</i>*</gl>
 				</li>
 			</ul>
 			<br>
@@ -79,6 +99,21 @@
 					(Not yet Available to the public, but already in a really good shape)
 				</li>
 				<br>
+				<li id="userlog">
+					<a href="https://github.com/Dangertech/userlog" target="_blank">
+						userlog
+					</a><gl class="special">- An easy to use logger for human beings</gl>
+					<br>
+					I wrote this because of my Raspberry Pi. You see, the Pi is supposed to
+					act as a server to my data, constantly running scripts to synchronize 
+					itself with the internet (for example, I currently let it synchronize my
+					OneDrive account every 3600 seconds). When I let it run for a few days without
+					supervision I need to be able to understand what and when happened when I
+					come back and notice that it doesn't work anymore. So, more specifically,
+					I needed <gl>something to write data to a file</gl> and it seemed as there
+					was <gl>no good software</gl> that did this yet, so I wrote it myself.
+				</li>
+				<br>
 				<li>
 					<a href="https://github.com/Dangertech/shitty-aoc-2021" target="_blank">
 						Shitty AdventOfCode 2021
@@ -104,7 +139,7 @@
 		They range from quick easy program to entire videogames.
 			<ul class="center">
 				<li>
-					<gl>Hackerman</gl>
+					<gl class="special">Hackerman</gl>
 					<br>
 					Wanna look cool in front of everyone without having to resolve
 					to websites like <a href="https://hackertyper.net" target="_blank">
@@ -118,7 +153,7 @@
 				</li>
 				<br>
 				<li>
-					<gl>LIFELINE - A week is a lifetime</gl>
+					<gl class="special">LIFELINE - A week is a lifetime</gl>
 					<br>
 					A macabre diary application, displaying how much of your life you
 					have already used up, how long you still have left to live,
@@ -129,7 +164,7 @@
 				</li>
 				<br>
 				<li>
-					<gl>A vocabulary trainer</gl>
+					<gl class="special">A vocabulary trainer</gl>
 					<br>
 					This would really come in handy sometime. The tool would be
 					a terminal application, again in ncurses. The data should
@@ -138,35 +173,45 @@
 				</li>
 				<br>
 				<li>
-					<gl>A Voxel game in which you build a society from scratch </gl>
+					<gl class="special">A Voxel game in which you build a society from scratch </gl>
 					<br>
 					The Idea is very rough, but it is supposed to be a 
 					city builder/simulation which takes on progressively larger scale.
 					You start in a dead universe, as a 3d character, on a large floating
 					rock once called earth. You are an <em>immortal being with otherwise
 					human powers</em> that lives since the 21st Century, now finally
-					pulling itself up to rebuild the universe. You start by building small
+					pulling itself up to <gl>rebuild the universe</gl>. You start by building small
 					machines enabling you to do basic things like terraforming a few voxels
-					at a time, creating energy and food. Then you clone your first human and
+					at a time, creating energy and food. Then you <gl>clone your first human </gl>and
 					create a society. You <em>can</em> then switch into a top-down view of your
 					planet, terraform at larger scale and manage multiple buildings at once.
-					Then you develop spacefaring, extending to other planets, eventually
-					conquering entire galaxies. You complete the game by building an artifact
-					that can create another universe, 
-					and create a new savefile.
+					Then you develop <gl>spacefaring</gl>, extending to other planets, eventually
+					<gl>conquering entire galaxies</gl>. You complete the game by building an artifact
+					that can <gl>create another universe</gl>, 
+					and create a new savefile. 
+					<br>
+					Pretty ambitious, I know. I would want to create an own engine for this game
+					to enable a high-performance simulation of possibly complex societies and machinery,
+					all set in a voxel world where you can modify every single one of the infinite
+					amount of voxels in an infinite universe.
 				</li>
 			</ul>
 		</p>
 		<h2 class="center hover"><gl>$</gl> dthub --list-ideas -p</h2>
 		<p class="center">
-		I've gotten a <a href="https://raspberrypi.org" target="_blank">Raspberry Pi 4 Model B</a> recently and am
-		currently collecting ideas on what to do with it. I want to use it as a server
-		and have it running 24/7, so it will probably complete data collection and web
-		scraping tasks. My ideas are pretty rough at the moment.
+		So my family has gifted me a 
+		<a href="https://raspberrypi.org" target="_blank">Raspberry Pi 4 Model B</a> for Christmas
+		and they are slowly realizing that this was a horrible idea and they are slowly
+		<gl>stripped of their privacy</gl> and confidence that no cameras are installed in this household.
+		(<i>I'm just joking of course, right? Right!?</i>)
+		<br>
+		I am working on software and scripts, published and unpublished, that are aiming
+		to make it an information collection center that runs routine tasks, like <gl>backing up</gl>, making
+		my data more accessible to me and <gl>gathering useful intel</gl> on stuff on the internet and my surroundings.
 		</p>
 		<ul class="center">
 			<li>
-				<gl>A simple log tracking the status of the pi 
+				<gl class="special">A simple log tracking the status of the pi 
 				and the devices I connect to it</gl>
 				<br>
 				This is a must have. Important data should be saved to a file on the pi,
@@ -178,9 +223,11 @@
 				<a href="http://smarden.org/runit/" target="_blank">runit</a>
 				to do something if it fails. Also, I want to log my SSH accesses but I don't
 				see the ssh log under /var/log/auth.log?
+				<br>
+				<gl>I have already written the backend for this,</gl> <a href="#userlog">userlog</a>
 			</li>
 			<li>
-				<gl>A Taskserver</gl>
+				<gl class="special">A Taskserver</gl>
 				<br>
 				I am using <a href="https://taskwarrior.org" target="_blank">Taskwarrior</a>, a really cool
 				and featureful CLI to-do list. They also have this project called 
@@ -193,7 +240,7 @@
 				but having a synchronization via my very own server sounds way cooler.
 			</li>
 			<li>
-				<gl>A camera system with face detection</gl>
+				<gl class="special">A camera system with face detection</gl>
 				<br>
 				I've always wanted to play around with 
 				<a href="https://opencv.org" target="_blank">OpenCV</a>. I'd simply 
@@ -206,13 +253,17 @@
 			</li>
 		</ul>
 		<p class="center">
-		I want the pi to be able to start all it's tasks autonomously, so I don't have
-		to plug in a monitor and keyboard and start them manually every time it boots.
-		This way, I have a little box that I just have to supply with power to start it.
-		I still have to configure a static IP address for the wi-fi chip though. I'm
-		still dependent on the Ethernet connector, which IP address I know. The processes
-		could be started in <gl>/etc/rc.local</gl>, 
-		which gets executed on boot<span class="blinking">|</span>
+		My current setup starts working autonomously as soon as I give power to it.
+		I've set up a static IP address for my Ethernet connection which can be accessed
+		about 5 seconds after powering on, thanks to the fabulous <gl>runit</gl> init scheme.
+		However, the <gl>WiFi doesn't want to work</gl> for some reason which makes me dependent
+		on having the Pi next to our router, where my father can reach out and easily switch it
+		off because he's creeped out by it. I need to find a solution and make the Pi
+		Ethernet-independent but I get an uneasy feeling that the WiFi chip might be broken...
+		<br>
+		On startup, runit executes whatever is in <gl>/etc/rc.local</gl> as root, which I use
+		to start some scripts that run as background processes, performing their job in an 
+		infinite loop until they are killed, normally only by shutdown<span class="blinking">|</span>
 		</p>
 		<! Set again by the sun.js script>
 		<div class="sun"></div>

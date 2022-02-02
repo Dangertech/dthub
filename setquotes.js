@@ -22,7 +22,11 @@ const quotes =
 	"These modern fears won't hold you down",
 	"<i>SWOOSH</i>",
 	"Dude, how cool would be an ARG on this website?",
-	"\"He puts dollar signs in front of his headings. That must mean he likes capitalism!\""
+	"\"He puts dollar signs in front of his headings. That must mean he likes capitalism!\"",
+	"<i>Swooooooosh</i>",
+	"Viva La Resistance!",
+	"Who knows if I don't watch your webcam right now? Better close that website...",
+	"Life is like flavored candles,... uh, nevermind."
 ];
 
 const target = document.getElementById("quote");
