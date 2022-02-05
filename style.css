@@ -9,6 +9,18 @@
 	--blink-percentage: 50%;
 }
 
+
+body
+{
+	font-family: "Courier New", "Lucida Console", monospace;
+	color: var(--main-text-color);
+}
+
+img
+{
+	max-width: 100%;
+	height: auto;
+}
 img.marginauto 
 {
 	margin: 10px auto 25px;
@@ -17,14 +29,6 @@ img.marginauto
 img.radial-bg
 {
 	background-image: radial-gradient(purple, transparent var(--blink-percentage));
-}
-
-
-
-body
-{
-	font-family: "Courier New", "Lucida Console", monospace;
-	color: var(--main-text-color);
 }
 
 .center
