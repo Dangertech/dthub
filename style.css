@@ -37,22 +37,23 @@ img.radial-bg
 	margin-right: 5cm;
 }
 
-/* Make text Glowing */
-gl
+
+/* Make text glow */
+gl, pipe.title
 {
 	color: var(--glow-accent-color);
 	font-style: normal;
 	text-shadow: 0 0 5px var(--glow-accent-color);
 	transition: 0.3s;
 }
-gl:hover
+gl:hover, pipe.title:hover
 {
 	color: var(--glow-hover-color);
 	font-style: normal;
 	text-shadow: 0 0 6px var(--glow-hover-color);
 }
 /* Special glow */
-gl.special
+gl.special, pipe.attribute
 {
 	color: var(--special-accent-color);
 	text-shadow: 0 0 5px var(--special-accent-color);
@@ -62,6 +63,17 @@ gl.special:hover
 	color: var(--special-hover-color);
 	text-shadow: 0 0 7px var(--special-hover-color);
 }
+
+/* Stuff for pipeline */
+pipe.title
+{
+	font-size: 22px;
+}
+pipe.attribute
+{
+	font-size: 14px;
+}
+
 
 /* Headings are brighter on hover */
 h1, h2, h3, h4, h5, h6
@@ -77,6 +89,9 @@ h1.hover:hover, h2.hover:hover, h3.hover:hover, h4.hover:hover, h5.hover:hover, 
 }
 
 /* Link configuration */
+a.none
+{
+}
 a:link
 {
 	color: darkorchid;
