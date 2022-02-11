@@ -73,6 +73,41 @@ pipe.attribute
 {
 	font-size: 14px;
 }
+div.box-blue
+{
+	border-style: solid;
+	border-color: #14a5ff;
+	border-radius: 8px;
+	margin: 20px;
+	padding: 20px;
+	/*box-shadow: 10px 10px;*/
+	box-shadow: 1px 1px 5px #14a5ff, 10px 10px 20px #14a5ff;
+}
+div.box-green
+{
+	border-style: solid;
+	border-color: #14a5ff;
+	border-radius: 8px;
+	margin: 20px;
+	padding: 20px;
+	/*box-shadow: 10px 10px;*/
+	box-shadow: 1px 1px 5px #14a5ff, 10px 10px 20px #14a5ff;
+}
+div.box-orange
+{
+	border-style: solid;
+	border-color: #14a5ff;
+	border-radius: 8px;
+	margin: 20px;
+	padding: 20px;
+	/*box-shadow: 10px 10px;*/
+	box-shadow: 1px 1px 5px #14a5ff, 10px 10px 20px #14a5ff;
+}
+a.pipe
+{
+	font-size: 22px !important;
+	text-shadow: 0 0 6px darkmagenta;
+}
 
 
 /* Headings are brighter on hover */
@@ -89,19 +124,16 @@ h1.hover:hover, h2.hover:hover, h3.hover:hover, h4.hover:hover, h5.hover:hover, 
 }
 
 /* Link configuration */
-a.none
-{
-}
-a:link
+a:link, a.pipe:link
 {
 	color: darkorchid;
 	transition: 0.3s;
 }
-a:visited
+a:visited, a.pipe:visited
 {
 	color: darkmagenta;
 }
-a:hover
+a:hover, a.pipe:hover
 {
 	color: darkorchid;
 	text-shadow: 0 0 6px darkorchid;

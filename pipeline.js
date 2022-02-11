@@ -33,13 +33,13 @@ var done =
 			`
 		},
 		{
-			title: "shitty-aoc-2021", link: null, attributes: "C++", description:
+			title: "shitty-aoc-2021", link: "https://github.com/Dangertech/shitty-aoc-2021", attributes: "C++", description:
 			`
 			(Available, but I take no responsibility)
 			`
 		},
 		{
-			title: "dthub", link: null, attributes: "website", description:
+			title: "dthub", link: "https://github.com/Dangertech/dthub", attributes: "website", description:
 			`
 			This is the code of this website, you can see the end product here;
 			It looks good and all, but especially the JavaScript Scripts are 
@@ -63,26 +63,48 @@ var doing =
 		}
 	];
 
+function formatEntry(entry, type)
+{
+	// Decide variables based on type
+	let boxType = "";
+	switch(type)
+	{
+		case "done":
+			boxType = "box-blue";
+			break;
+		case "doing":
+			boxType = "box-green";
+			break;
+		case "todo":
+			boxType = "box-orange";
+			break;
+		default:
+			console.log("ERROR IN PIPELINE: WRONG ARGUMENT PROVIDED TO formatEntry()");
+	}
+	let html = "";
+	html += "<div class=\"box-blue\">";
+	// Title
+	if (entry.link != null && entry.link != undefined)
+		html += "<a class=\"pipe\" href=\"" + entry.link + "\">" + entry.title + "</a> "; 
+	else
+		html += "<pipe class=\"title\">" + entry.title + "</pipe> "; 
+	// Attributes
+	html += "<pipe class=\"attribute\">" + entry.attributes + "</pipe>";
+	 
+	html += "<br>";
+	 
+	// Description
+	html += "<pipe class=\"Description\">" + entry.description + "</pipe>";
+	html += "</div>";
+	return html;
+}
 // Start putting items into document
 let pipeloc = document.getElementById("pipeline");
 let html = "";
 html += "<div>";
 for (let i = 0; i<done.length; i++)
 {
-	html += "<div style=\"border-style: solid; border-radius: 8px; margin: 20px; padding: 20px;\">";
-	// Title
-	//if (done[i].link != null && done[i].link != undefined)
-	//	html += "<pipe class=\"title\"> <a class=\"none\" href=\"" + done[i].link + "\">" + done[i].title + "</a></pipe>"; 
-	//else
-		html += "<pipe class=\"title\">" + done[i].title + "</pipe> "; 
-	// Attributes
-	html += "<pipe class=\"attribute\">" + done[i].attributes + "</pipe>";
-	 
-	html += "<br>";
-	 
-	// Description
-	html += "<pipe class=\"Description\">" + done[i].description + "</pipe>";
-	html += "</div>";
+	html += formatEntry(done[i], "done");
 }
 html += "</div>";
 
