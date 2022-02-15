@@ -26,7 +26,11 @@ const quotes =
 	"<i>Swooooooosh</i>",
 	"Viva La Resistance!",
 	"Who knows if I don't watch your webcam right now? Better close that website...",
-	"Life is like flavored candles,... uh, nevermind."
+	"Life is like flavored candles,... uh, nevermind.",
+	"This is war. I will reign superior over your filthy little child games",
+	"You can't defeat <i>me</i>!",
+	"The communists have declared war on me. I must defend myself!",
+	"*<i>has impostor syndrome</i>*"
 ];
 
 const target = document.getElementById("quote");

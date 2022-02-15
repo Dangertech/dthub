@@ -9,6 +9,18 @@
 	--blink-percentage: 50%;
 }
 
+
+body
+{
+	font-family: "Courier New", "Lucida Console", monospace;
+	color: var(--main-text-color);
+}
+
+img
+{
+	max-width: 100%;
+	height: auto;
+}
 img.marginauto 
 {
 	margin: 10px auto 25px;
@@ -19,36 +31,29 @@ img.radial-bg
 	background-image: radial-gradient(purple, transparent var(--blink-percentage));
 }
 
-
-
-body
-{
-	font-family: "Courier New", "Lucida Console", monospace;
-	color: var(--main-text-color);
-}
-
 .center
 {
 	margin-left: 5cm;
 	margin-right: 5cm;
 }
 
-/* Make text Glowing */
-gl
+
+/* Make text glow */
+gl, pipe.title
 {
 	color: var(--glow-accent-color);
 	font-style: normal;
 	text-shadow: 0 0 5px var(--glow-accent-color);
 	transition: 0.3s;
 }
-gl:hover
+gl:hover, pipe.title:hover
 {
 	color: var(--glow-hover-color);
 	font-style: normal;
 	text-shadow: 0 0 6px var(--glow-hover-color);
 }
 /* Special glow */
-gl.special
+gl.special, pipe.attribute
 {
 	color: var(--special-accent-color);
 	text-shadow: 0 0 5px var(--special-accent-color);
@@ -58,6 +63,79 @@ gl.special:hover
 	color: var(--special-hover-color);
 	text-shadow: 0 0 7px var(--special-hover-color);
 }
+
+/* Stuff for pipeline */
+pipe.title
+{
+	font-size: 22px;
+}
+pipe.attribute
+{
+	font-size: 14px;
+}
+div.box-blue
+{
+	border-style: solid;
+	border-color: #14a5ff;
+	border-radius: 8px;
+	margin: 20px;
+	padding: 20px;
+	box-shadow: 1px 1px 5px #14a5ff, 10px 10px 20px #14a5ff;
+	transition: 0.3s;
+}
+div.box-blue:hover
+{
+	border-color: #0cdfff;
+	box-shadow: 3px 3px 8px #0cdfff, 12px 12px 20px #0cdfff;
+	border-radius: 20px;
+}
+div.box-green
+{
+	border-style: dashed;
+	border-color: green;
+	border-radius: 8px;
+	margin: 20px;
+	padding: 20px;
+	box-shadow: 1px 1px 5px green, 10px 10px 20px green;
+	transition: 0.3s;
+}
+div.box-green:hover
+{
+	border-color: #3bdf00;
+	box-shadow: 3px 3px 8px #3bdf00, 12px 12px 20px #3bdf00;
+	border-radius: 20px;
+}
+div.box-orange
+{
+	border-style: solid;
+	border-color: #dcb300;
+	border-radius: 8px;
+	margin: 20px;
+	padding: 20px;
+	box-shadow: 1px 1px 5px #dcb300, 10px 10px 20px #dcb300;
+	transition: 0.3s;
+}
+div.box-orange:hover
+{
+	border-color: #ffcc00;
+	box-shadow: 3px 3px 8px #ffcc00, 12px 12px 20px #ffcc00;
+	border-radius: 20px;
+}
+div.move-stripes
+{
+	background-image: repeating-linear-gradient(-45deg, #00000000 , #00000000 30px, #00800080 30px, #00800080 60px);
+}
+div.move-stripes:hover
+{
+	background-image: repeating-linear-gradient(-45deg, #00000000 , #00000000 30px, #00d30080 30px, #00d30080 60px);
+}
+
+a.pipe
+{
+	font-size: 22px !important;
+	text-shadow: 0 0 6px darkmagenta;
+}
+
 
 /* Headings are brighter on hover */
 h1, h2, h3, h4, h5, h6
@@ -73,16 +151,16 @@ h1.hover:hover, h2.hover:hover, h3.hover:hover, h4.hover:hover, h5.hover:hover, 
 }
 
 /* Link configuration */
-a:link
+a:link, a.pipe:link
 {
 	color: darkorchid;
 	transition: 0.3s;
 }
-a:visited
+a:visited, a.pipe:visited
 {
 	color: darkmagenta;
 }
-a:hover
+a:hover, a.pipe:hover
 {
 	color: darkorchid;
 	text-shadow: 0 0 6px darkorchid;

@@ -9,6 +9,10 @@
 		<script src="setquotes.js" async></script>
 		<!Moves the synthetik sun>
 		<script src="sun.js" async></script>
+		<!github API>
+		<script src="richgit.js" async></script>
+		<!Project Pipeline>
+		<script src="pipeline.js" defer></script>
 	</head>
 
 	<body>
@@ -24,6 +28,17 @@
 			ads for myself, stuff about me and what I do.
 		</p>
 		 
+		<h2 class="center hover"><gl>$</gl> dthub --github</h2>
+		<p class="center">
+		This is the <gl>dead simple</gl> start of my github "rich presence" feature. The endgoal
+		is to have a little info box here that shows my latest commit in <i>any</i> of my repos
+		and how long ago it were. I need <gl>Authentication</gl> for that (with my account, to get my
+		private repos) and I yet have to figure out how to do that without presenting my password
+		to you, dear visitor, on a silver tablet.
+		</p>
+		<! Put in by richgit.js (checks for "richgit" id>
+		<div class="center" id="richgit" style="overflow: auto; display: flex; justify-content: center; align-items: center;"></div>
+		<br>
 		<h2 class="center hover"><gl>$</gl> dthub --future</h2>
 		<p class="center">
 			<img src="sources/under_construction.gif" alt="I swear, I'm working so hard right now...">
@@ -31,7 +46,16 @@
 			Right now, this website is not in a state where I'd call it done (although it looks really
 			sexy already). My teacher <gl>didn't announce a deadline yet</gl>, so I'll just fumble around
 			a bit for now. I have some things I want to implement until the time runs out:
+		</p>
 			<ul class="center">
+				<li>
+					<gl class="special">Refactor the --list--projects and --list-ideas -c tag into one</gl>
+					<br>
+					Ok, so here's the plan in shitty text-form: We have <gl>three "sections": Done, Doing and To Do</gl>
+					The individual entries are encased in fancy boxes and the sections are visibly connected to each
+					other. The "doing" section might have an animation with some kind of <gl>inifinite progress</gl>
+					bar or something, in the usual epik neon style.
+				</li>
 				<li>
 					Add a <gl class="special">GitHub "Rich Presence"</gl> section.
 					<br>
@@ -47,16 +71,17 @@
 				</li>
 				<li>
 					<gl class="special">Split up the website into multiple links</gl>
+					<br>
 					The website is growing, and I need to get some structure in there. Having separate
 					pages would make it easier to manage and view it but downgrade the "<i>overall experience</i>"
 					(the SYNTHETIK SUN, the gradient, etc...).
 				</li>
+				<br>
 				<li>
 					A <gl class="special">random line of text</gl> below the logo that changes upon reloading the page. 
 					A JavaScript script will run through a file with quotes and pick a random one. 
 					<gl>✓ This is done!</gl>
 				</li>
-				<br>
 				<li>
 					An 
 					<a href="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.FsEwZ4GxtqHzo-UoC6QkzQHaEo%26pid%3DApi&f=1"
@@ -67,136 +92,19 @@
 					<gl>✓ This is done and it looks <i>really</i> cool. Reload the page and scroll down to see how it rises!</gl>
 				</li>
 				<li>
-					Make the <gl>SYNTHETIK SUN swoosh</gl> a bit up and down after it has risen. This is due 2021-1-19;
+					Make the <gl class="special">SYNTHETIK SUN swoosh</gl> a bit up and down after it has risen. This is due 2021-1-19;
 					<gl>✓ This is done! *<i>swoosh</i>* "Haha!" *<i>swooooosh</i>*</gl>
 				</li>
 			</ul>
-			<br>
-			<img class="center" src="sources/under_construction.gif" alt="I swear, I'm working so hard right now...">
+		<p class="center">
+			<img src="sources/under_construction.gif" alt="I swear, I'm working so hard right now...">
 		</p>
 		<h2 class="center hover"><gl>$</gl> dthub --list-projects</h2>
-		<p class="center">
-			<ul class="center">
-				<li>
-					<a href="https://github.com/Dangertech/tictactoe-ncurses" target="_blank">
-						tictactoe-ncurses
-					</a>
-					<br>
-					An overengineered tic-tac-toe game written in C++ 
-					utilizing the ncurses library
-				</li>
-				<br>
-				<li>
-					<a href="https://github.com/Dangertech/lesson-controller" target="_blank">
-						lesson-controller
-					</a>
-					<br>
-					Software to manage static timetables, like in school. Intended
-					to be easily parsable by scripts to let ones computer react
-					dynamically to the current lesson. I myself want to use it for
-					assigning my homework the right lesson tag and due dates automatically
-					<br>
-					(Not yet Available to the public, but already in a really good shape)
-				</li>
-				<br>
-				<li id="userlog">
-					<a href="https://github.com/Dangertech/userlog" target="_blank">
-						userlog
-					</a><gl class="special">- An easy to use logger for human beings</gl>
-					<br>
-					I wrote this because of my Raspberry Pi. You see, the Pi is supposed to
-					act as a server to my data, constantly running scripts to synchronize 
-					itself with the internet (for example, I currently let it synchronize my
-					OneDrive account every 3600 seconds). When I let it run for a few days without
-					supervision I need to be able to understand what and when happened when I
-					come back and notice that it doesn't work anymore. So, more specifically,
-					I needed <gl>something to write data to a file</gl> and it seemed as there
-					was <gl>no good software</gl> that did this yet, so I wrote it myself.
-				</li>
-				<br>
-				<li>
-					<a href="https://github.com/Dangertech/shitty-aoc-2021" target="_blank">
-						Shitty AdventOfCode 2021
-					</a>
-					<br>
-					(Available, but I take no responsibility)
-				</li>
-				<br>
-				<li>
-					<a href="https://github.com/Dangertech/dthub" target="_blank">The code for this website</a>
-					<br>
-					is also available on my GitHub profile. Mind you, I'm very new to web
-					development and my code might be badly organized and that JavaScript
-					script controlling the glow on the logo, oh boy, that's probably the
-					pinnacle of inefficiency.
-				</li>
-			</ul>
-		</p>
+		<! Pipeline with projects >
+		<div id="pipeline" class="center"></div>
 		 
-		<h2 class="center hover"><gl>$</gl> dthub --list-ideas -c</h2>
-		<p class="center">
-		I have some ideas for future projects that I might take on one day.
-		They range from quick easy program to entire videogames.
-			<ul class="center">
-				<li>
-					<gl class="special">Hackerman</gl>
-					<br>
-					Wanna look cool in front of everyone without having to resolve
-					to websites like <a href="https://hackertyper.net" target="_blank">
-						hackertyper</a>
-					and doing it all from the comfort and speed of your terminal?
-					Hackerman wants to do all this. I imagine a system that lets you
-					define a file to show the text from and properties like if you
-					have to type to advance the text or if it scrolls automatically,
-					the appearance and more through arguments, and then run it through
-					<gl>ncurses</gl>.
-				</li>
-				<br>
-				<li>
-					<gl class="special">LIFELINE - A week is a lifetime</gl>
-					<br>
-					A macabre diary application, displaying how much of your life you
-					have already used up, how long you still have left to live,
-					and a chart showing every week in your life you already lived,
-					inspired by 
-					<a href="https://shop-us.kurzgesagt.org/products/lifespan-calendar-poster?variant=39451596455984" target="_blank">
-						kurzgesagt</a>.
-				</li>
-				<br>
-				<li>
-					<gl class="special">A vocabulary trainer</gl>
-					<br>
-					This would really come in handy sometime. The tool would be
-					a terminal application, again in ncurses. The data should
-					be saved using the ankidroid format or another existing
-					flash cards file format.
-				</li>
-				<br>
-				<li>
-					<gl class="special">A Voxel game in which you build a society from scratch </gl>
-					<br>
-					The Idea is very rough, but it is supposed to be a 
-					city builder/simulation which takes on progressively larger scale.
-					You start in a dead universe, as a 3d character, on a large floating
-					rock once called earth. You are an <em>immortal being with otherwise
-					human powers</em> that lives since the 21st Century, now finally
-					pulling itself up to <gl>rebuild the universe</gl>. You start by building small
-					machines enabling you to do basic things like terraforming a few voxels
-					at a time, creating energy and food. Then you <gl>clone your first human </gl>and
-					create a society. You <em>can</em> then switch into a top-down view of your
-					planet, terraform at larger scale and manage multiple buildings at once.
-					Then you develop <gl>spacefaring</gl>, extending to other planets, eventually
-					<gl>conquering entire galaxies</gl>. You complete the game by building an artifact
-					that can <gl>create another universe</gl>, 
-					and create a new savefile. 
-					<br>
-					Pretty ambitious, I know. I would want to create an own engine for this game
-					to enable a high-performance simulation of possibly complex societies and machinery,
-					all set in a voxel world where you can modify every single one of the infinite
-					amount of voxels in an infinite universe.
-				</li>
-			</ul>
-		</p>
+		<br>
+		<br>
 		<h2 class="center hover"><gl>$</gl> dthub --list-ideas -p</h2>
 		<p class="center">
 		So my family has gifted me a 
