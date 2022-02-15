@@ -60,6 +60,51 @@ var doing =
 			while epic stuff scrolls across their screen. But vainglorious wants to be 
 			a pretty good simulation of all the exaggerated stuff you see on TV.
 			`
+		},
+		{
+			title: "schreps", link: "https://github.com/Dangertech/schreps", attributes: "JavaScript Screeps",
+			description:
+			`
+			This is my bot for the MMO colony game <a href="https://screeps.com">Screeps</a>.
+			`
+		}
+	];
+
+var todo =
+	[
+		{
+			title: "LIFELINE", link: null, attributes: "- a week is a lifetime", description:
+			`
+			A macabre diary application, displaying how much of your life you have already used up, 
+			how long you still have left to live, and a chart showing every week in your life 
+			you already lived, inspired by 
+			<a href="https://shop-eu.kurzgesagt.org/products/lifespan-calendar-poster?userselect=1">kurzgesagt</a>.
+			`
+		},
+		{
+			title: "A Voxel game in which you build a society from scratch", link: null, attributes: 
+			"C++ 3D Game", description:
+			`
+				The Idea is very rough, but it is supposed to be a 
+				city builder/simulation which takes on progressively larger scale.
+				You start in a dead universe, as a 3d character, on a large floating
+				rock once called earth. You are an <em>immortal being with otherwise
+				human powers</em> that lives since the 21st Century, now finally
+				pulling itself up to <gl>rebuild the universe</gl>. You start by building small
+				machines enabling you to do basic things like terraforming a few voxels
+				at a time, creating energy and food. Then you <gl>clone your first human </gl>and
+				create a society. You <em>can</em> then switch into a top-down view of your
+				planet, terraform at larger scale and manage multiple buildings at once.
+				Then you develop <gl>spacefaring</gl>, extending to other planets, eventually
+				<gl>conquering entire galaxies</gl>. You complete the game by building an artifact
+				that can <gl>create another universe</gl>, 
+				and create a new savefile. 
+				<br>
+				Pretty ambitious, I know. I would want to create an own engine for this game
+				to enable a high-performance simulation of possibly complex societies and machinery,
+				all set in a voxel world where you can modify every single one of the infinite
+				amount of voxels in an infinite universe.
+			`
 		}
 	];
 
@@ -73,7 +118,7 @@ function formatEntry(entry, type)
 			boxType = "box-blue";
 			break;
 		case "doing":
-			boxType = "box-green";
+			boxType = "box-green move-stripes";
 			break;
 		case "todo":
 			boxType = "box-orange";
@@ -82,7 +127,7 @@ function formatEntry(entry, type)
 			console.log("ERROR IN PIPELINE: WRONG ARGUMENT PROVIDED TO formatEntry()");
 	}
 	let html = "";
-	html += "<div class=\"box-blue\">";
+	html += "<div class=\"" + boxType + "\">";
 	// Title
 	if (entry.link != null && entry.link != undefined)
 		html += "<a class=\"pipe\" href=\"" + entry.link + "\">" + entry.title + "</a> "; 
@@ -101,11 +146,15 @@ function formatEntry(entry, type)
 // Start putting items into document
 let pipeloc = document.getElementById("pipeline");
 let html = "";
-html += "<div>";
-for (let i = 0; i<done.length; i++)
-{
+html += "<h3 style=\"text-align: center;\">Done</h3>"
+	 + "<div>";
+for (let i in done)
 	html += formatEntry(done[i], "done");
-}
-html += "</div>";
+html += "</div><h3 style=\"text-align: center;\">Doing</h3><div>";
+for (let i in doing)
+	html += formatEntry(doing[i], "doing");
+html += "</div><h3 style=\"text-align: center;\">To-Do</h3><div>";
+for (let i in todo)
+	html += formatEntry(todo[i], "todo");
 
 pipeloc.innerHTML = html;

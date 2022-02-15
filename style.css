@@ -80,29 +80,56 @@ div.box-blue
 	border-radius: 8px;
 	margin: 20px;
 	padding: 20px;
-	/*box-shadow: 10px 10px;*/
 	box-shadow: 1px 1px 5px #14a5ff, 10px 10px 20px #14a5ff;
+	transition: 0.3s;
+}
+div.box-blue:hover
+{
+	border-color: #0cdfff;
+	box-shadow: 3px 3px 8px #0cdfff, 12px 12px 20px #0cdfff;
+	border-radius: 20px;
 }
 div.box-green
 {
-	border-style: solid;
-	border-color: #14a5ff;
+	border-style: dashed;
+	border-color: green;
 	border-radius: 8px;
 	margin: 20px;
 	padding: 20px;
-	/*box-shadow: 10px 10px;*/
-	box-shadow: 1px 1px 5px #14a5ff, 10px 10px 20px #14a5ff;
+	box-shadow: 1px 1px 5px green, 10px 10px 20px green;
+	transition: 0.3s;
+}
+div.box-green:hover
+{
+	border-color: #3bdf00;
+	box-shadow: 3px 3px 8px #3bdf00, 12px 12px 20px #3bdf00;
+	border-radius: 20px;
 }
 div.box-orange
 {
 	border-style: solid;
-	border-color: #14a5ff;
+	border-color: #dcb300;
 	border-radius: 8px;
 	margin: 20px;
 	padding: 20px;
-	/*box-shadow: 10px 10px;*/
-	box-shadow: 1px 1px 5px #14a5ff, 10px 10px 20px #14a5ff;
+	box-shadow: 1px 1px 5px #dcb300, 10px 10px 20px #dcb300;
+	transition: 0.3s;
 }
+div.box-orange:hover
+{
+	border-color: #ffcc00;
+	box-shadow: 3px 3px 8px #ffcc00, 12px 12px 20px #ffcc00;
+	border-radius: 20px;
+}
+div.move-stripes
+{
+	background-image: repeating-linear-gradient(-45deg, #00000000 , #00000000 30px, #00800080 30px, #00800080 60px);
+}
+div.move-stripes:hover
+{
+	background-image: repeating-linear-gradient(-45deg, #00000000 , #00000000 30px, #00d30080 30px, #00d30080 60px);
+}
+
 a.pipe
 {
 	font-size: 22px !important;
