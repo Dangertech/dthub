@@ -5,6 +5,14 @@ var done =
 			attributes: "C++", description:
 			`
 			An overengineered tic-tac-toe game written in C++ utilizing the ncurses library
+			<br>
+			This right here was <gl>my first <i>real</i> larger-scale program</gl> and at 
+			the same time the beginning
+			of my dive into the extremely robust programming language couple C/C++. It's just
+			what it says - a tictactoe game for your terminal. It has quite a lot of features
+			and even (a <i>really</i> shitty) <gl>computer enemy</gl>! The code quality is horseshit
+			in retrospect but find it holds up really good in comparison to its competitors on
+			github.
 			`
 		},
 		{
@@ -66,6 +74,30 @@ var doing =
 			description:
 			`
 			This is my bot for the MMO colony game <a href="https://screeps.com">Screeps</a>.
+			Screeps is one of the most complex and most interesting video games I've ever encountered.
+			Although the concepts and mechanics are simple, you can probably spend thousands of hours
+			refining your approaches and prepare to react to every situation. You have a spawn in a vast
+			world filled with other players. The basic goal is to spawn creeps (think of them as little
+			robots) that harvest resources to provide to their colony and build up your own little society,
+			completely managed through your own JavaScript code.
+			The game has also heavy PVP elements as resources are not that plentiful so you might start
+			a war with another colony (there was even a World War!) In short, its a colony "simulation"
+			but you have to code the sim AI yourself.
+			<br>
+			My bot is not very advanced (yet) and right now only manages to occupy one room and does
+			not expand. It manages creeps based on tasks that are <gl>dynamically assigned</gl> based on the
+			colony needs (we need more energy -> Assign more creeps that harvest Energy; Some structure
+			requires repair -> Assign creeps that repair this structure). This is a real advantage
+			in contrary to the classical "role" model (one creep gets one task to execute for it's
+			whole lifetime): The spawn doesn't have to constantly produce creeps that execute a task
+			maybe once and then stand around idly, but instead the colony adapts quickly to changes.
+			However, it is more complicated to code and makes trouble with stupid creep selection
+			for tasks (Code selects a creep to pick up energy although it can't carry a lot, or a
+			creep changes it's task all the time and never gets something done).
+			<br>
+			I'm als currently saving up some money for the <gl>CPU lifetime subscription</gl> for
+			110€ so I am dedicated more time by the Screeps servers to run my code, and can
+			in turn manage a wayyy bigger colony.
 			`
 		}
 	];
