@@ -1,0 +1,80 @@
+<html>
+	<head>
+		<title>dthub/pi</title>
+		<script src="../title.js" async></script>
+		<script src="../sun.js" async></script>
+		<link rel="stylesheet" href="../style.css">
+	</head>
+	<body>
+		<div id="title" logosrc="../sources/dthublogo.png"></div>
+		<h2 class="center hover"><gl>$</gl> dthub --list-ideas -p</h2>
+		<p class="center">
+		So my family has gifted me a 
+		<a href="https://raspberrypi.org" target="_blank">Raspberry Pi 4 Model B</a> for Christmas
+		and they are slowly realizing that this was a horrible idea and they are slowly
+		<gl>stripped of their privacy</gl> and confidence that no cameras are installed in this household.
+		(<i>I'm just joking of course, right? Right!?</i>)
+		<br>
+		I am working on software and scripts, published and unpublished, that are aiming
+		to make it an information collection center that runs routine tasks, like <gl>backing up</gl>, making
+		my data more accessible to me and <gl>gathering useful intel</gl> on stuff on the internet and my surroundings.
+		</p>
+		<ul class="center">
+			<li>
+				<gl class="special">A simple log tracking the status of the pi 
+				and the devices I connect to it</gl>
+				<br>
+				This is a must have. Important data should be saved to a file on the pi,
+				like which temperature it has, when it got disconnected from the internet
+				<span title="'For real, when our heating system doesn't work anymore, I'll blame it on that thing, no matter if it really is it's fault or not!'">
+					(my father fears this thing, so this might be very useful),
+				</span>
+				or maybe even if it crashes, but I don't know if I can get 
+				<a href="http://smarden.org/runit/" target="_blank">runit</a>
+				to do something if it fails. Also, I want to log my SSH accesses but I don't
+				see the ssh log under /var/log/auth.log?
+				<br>
+				<gl>I have already written the backend for this,</gl> <a href="#userlog">userlog</a>
+			</li>
+			<li>
+				<gl class="special">A Taskserver</gl>
+				<br>
+				I am using <a href="https://taskwarrior.org" target="_blank">Taskwarrior</a>, a really cool
+				and featureful CLI to-do list. They also have this project called 
+				<a href="https://taskwarrior.org/docs/taskserver/why.html" target="_blank">Taskserver</a>
+				which lets you, as the name suggests, set up a tool on a server that 
+				synchronizes all your tasks across all your devices. I currently do this
+				through OneDrive by just having my task folder in my OneDrive directory
+				that I sync regularly with the amazing 
+				<a href="https://github.com/abraunegg/onedrive" target="_blank">OneDrive CLI tool by abraunegg</a>,
+				but having a synchronization via my very own server sounds way cooler.
+			</li>
+			<li>
+				<gl class="special">A camera system with face detection</gl>
+				<br>
+				I've always wanted to play around with 
+				<a href="https://opencv.org" target="_blank">OpenCV</a>. I'd simply 
+				connect a webcam to the pi and let a program run that collects the webcam
+				data, saves an image every 3 seconds or so and tries to get interesting data
+				out of it (how bright is it, are there faces/movement on the image, etc).
+				I don't know if it's a smart idea to pull that off with C++ as well, maybe
+				I'd have to use Python for that, but I like the idea to try and decode
+				the camera data through C++ by myself.
+			</li>
+		</ul>
+		<p class="center">
+		My current setup starts working autonomously as soon as I give power to it.
+		I've set up a static IP address for my Ethernet connection which can be accessed
+		about 5 seconds after powering on, thanks to the fabulous <gl>runit</gl> init scheme.
+		However, the <gl>WiFi doesn't want to work</gl> for some reason which makes me dependent
+		on having the Pi next to our router, where my father can reach out and easily switch it
+		off because he's creeped out by it. I need to find a solution and make the Pi
+		Ethernet-independent but I get an uneasy feeling that the WiFi chip might be broken...
+		<br>
+		On startup, runit executes whatever is in <gl>/etc/rc.local</gl> as root, which I use
+		to start some scripts that run as background processes, performing their job in an 
+		infinite loop until they are killed, normally only by shutdown<span class="blinking">|</span>
+		</p>
+		<div id="sun" src="../sources/Synthcity.keyed.png"></div>
+	</body>
+</html>

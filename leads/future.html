@@ -1,0 +1,92 @@
+<html>
+	<head>
+		<title>dthub/future</title>
+		<script src="../sun.js" async></script>
+		<script src="../title.js" async></script>
+		<link rel="stylesheet" href="../style.css">
+	</head>
+	<body>
+		<div id="title" logosrc="../sources/dthublogo.png"></div>
+		<h2 class="center hover"><gl>$</gl> dthub --future</h2>
+		<p class="center">
+			<img src="../sources/under_construction.gif" alt="I swear, I'm working so hard right now...">
+			<br>
+			Right now, this website is not in a state where I'd call it done (although it looks really
+			sexy already). My teacher <gl>didn't announce a deadline yet</gl>, so I'll just fumble around
+			a bit for now. I have some things I want to implement until the time runs out:
+		</p>
+			<ul class="center">
+				<li>
+					<gl class ="special">EVERRAIN</gl>, a rain effect accross the site
+					<br>
+					Just some long, pale blue stripes of rain falling from top to bottom.
+					This should be unobstrusive and should definitely be able to be toggled off 
+					(<gl>Settings Menu o_O?</gl>)
+				</li>
+				<li>
+					Some sort of <gl class="special">Interactive Ticker</gl>
+					<br>
+					I want some more user interaction. I hate it that this website does some stuff, but
+					in its essence, it's just there, it's <gl>static</gl>, it <gl>never evolves</gl>. Ok,
+					hear me out: <gl><i>How about visitors being able to add THEIR OWN HEADER ENTRIES?</i></gl>.
+					The current random quote will be refactored to a "news" ticker that scrolls accross the screen
+					(like in <a href="https://ivark.github.io">Antimatter Dimensions</a>, for example) and somewhere
+					accessible, there's an option for users to add their own entries (I don't yet know if I want 
+					to hand-approve them or just true OG anarchy style throw them all in there). I will set up
+					a <gl>SQL Database</gl> (basically a programmable Excel spreadsheet) to manage all this data,
+					and this will be my head start into the wide world of data management.
+				</li>
+				<li>
+					<gl class="special">Refactor the --list--projects and --list-ideas -c tag into one</gl>
+					<br>
+					Ok, so here's the plan in shitty text-form: We have <gl>three "sections": Done, Doing and To Do</gl>
+					The individual entries are encased in fancy boxes and the sections are visibly connected to each
+					other. The "doing" section might have an animation with some kind of <gl>inifinite progress</gl>
+					bar or something, in the usual epik neon style.
+				</li>
+				<li>
+					Add a <gl class="special">GitHub "Rich Presence"</gl> section.
+					<br>
+					I have no idea how to do this tbh, but I want a section that shows stuff like <gl>my
+					most recent commit, when and on which project it was</gl> and stuff like that, and
+					of course I want it to update automatically. I know of the 
+					<a href="https://docs.github.com/en/rest" target="_blank">GitHub REST API</a>, but
+					I don't even know what REST means and if it is <gl>even possible to make HTTP GET requests
+					on Website load</gl> (but I'm optimistic with that, JavaScript was made exactly for things
+					like that after all). Another thing to consider is the authenticity: GitHub probably
+					doesn't want random websites bombarding their servers with requests, so the 
+					idea might fail because of this. I'll see soon, I guess.
+				</li>
+				<li>
+					<gl class="special">Split up the website into multiple links</gl>
+					<br>
+					The website is growing, and I need to get some structure in there. Having separate
+					pages would make it easier to manage and view it but downgrade the "<i>overall experience</i>"
+					(the SYNTHETIK SUN, the gradient, etc...).
+				</li>
+				<br>
+				<li>
+					A <gl class="special">random line of text</gl> below the logo that changes upon reloading the page. 
+					A JavaScript script will run through a file with quotes and pick a random one. 
+					<gl>✓ This is done!</gl>
+				</li>
+				<li>
+					An 
+					<a href="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.FsEwZ4GxtqHzo-UoC6QkzQHaEo%26pid%3DApi&f=1"
+					   target="_blank">
+						epic synthwave sun
+					</a> 
+					at the bottom of the page, shining up with a linear gradient. Man, I love that artstyle.
+					<gl>✓ This is done and it looks <i>really</i> cool. Reload the page and scroll down to see how it rises!</gl>
+				</li>
+				<li>
+					Make the <gl class="special">SYNTHETIK SUN swoosh</gl> a bit up and down after it has risen. This is due 2021-1-19;
+					<gl>✓ This is done! *<i>swoosh</i>* "Haha!" *<i>swooooosh</i>*</gl>
+				</li>
+			</ul>
+
+		<img class="center" src="../sources/under_construction.gif" alt="I swear, I'm working so hard right now...">
+		 
+		<div id="sun" src="../sources/Synthcity.keyed.png"></div>
+	</body>
+</html>
