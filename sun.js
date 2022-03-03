@@ -1,4 +1,4 @@
-let sun = {"src": "sources/Synthcity.keyed.png", "width": 3840, "height": 1164};
+let sun = {"src": document.getElementById("sun").getAttribute("src"), "width": 3840, "height": 1164};
 let gradient_diff = 0, gradient_from = 100, gradient_to = 70;
 let wobble_min = 20;
 const sunStyle = document.createElement('style');
@@ -19,7 +19,7 @@ function apply(mv, bg_percent, mySun)
 	{
 		background-image: linear-gradient(var(--main-bg-color) ` + bg_percent.toString() + `%, #e30088 100%);
 	}
-	.sun
+	#sun
 	{
 		padding-top: ` + (mySun.height/(mySun.width/window.innerWidth)).toString() + `px;
 		background-image: url("` + mySun.src + `");
