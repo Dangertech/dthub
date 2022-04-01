@@ -1,7 +1,12 @@
 // Basic stuff
 const headerTarget = document.getElementById("title");
 
-headerTarget.innerHTML = `<img id="logo"></img><div id="quote"></div>`;
+headerTarget.innerHTML = `<img id="logo" onclick="toStart()"></img><div id="quote"></div>`;
+
+function toStart()
+{
+	window.location.replace("../index.html");
+}
 // QUOTES
 const quotes = 
 [
