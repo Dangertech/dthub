@@ -32,10 +32,26 @@ img.radial-bg
 	background-image: radial-gradient(purple, transparent var(--blink-percentage));
 }
 
+th
+{
+	font-size: min(1.4vw, 16px);
+	border: 1px solid #980c9d;
+	box-shadow: 3px 3px 10px #980c9d;
+	padding: 5px;
+	position: center;
+}
+ 
+th.av:hover
+{
+	border: 1px solid #ffffff !important;
+	box-shadow: 3px 3px 10px #ffffff !important;
+}
+
+ 
 .center
 {
-	margin-left: 5cm;
-	margin-right: 5cm;
+	margin-left: 8%;
+	margin-right: 8%;
 }
 
 
@@ -111,6 +127,7 @@ div.box-orange
 	border-style: solid;
 	border-color: #dcb300;
 	border-radius: 8px;
+	text-shadow: 0 0 5px var(--glow-accent-color);
 	margin: 20px;
 	padding: 20px;
 	box-shadow: 1px 1px 5px #dcb300, 10px 10px 20px #dcb300;

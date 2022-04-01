@@ -1,0 +1,187 @@
+
+<html>
+	<head>
+		<title>dthub/projects</title>
+		<script src="../sun.js" async></script>
+		<script src="../title.js" async></script>
+		<link rel="stylesheet" href="../style.css">
+
+	</head>
+	<body>
+		<div id="title" logosrc="../sources/dthublogo.png"></div>
+		<p class="center">
+			My CS teacher forces me to make a table. Well fine, you
+			want a table you get a table: Instead of displaying my
+			timetable, how it was suggested in class, I chose to just
+			smack some good music on there. Kind of defeats the purpose
+			on a table, because the y-Position doesn't matter, but it 
+			proves that I understand the concept of tables in javascript.
+		</p>
+		<div class="center" id="songshit"></div>
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		<p class="center" style="text-shadow: 8px 8px 3px;">
+			Do you want an awesome tool to display your timetable
+			<gl style="text-shadow: 8px 8px 3px;">right in your terminal</gl>? Look no further, but behold
+			on 
+			<a href="https://github.com/Dangertech/lesson-controller">lesson-controller</a>!
+		</p>
+		<div id="sun" src="../sources/Synthcity.keyed.png"></div>
+	</body>
+</html>
+<script>
+	function genStyle(color)
+	{
+		return "color:" + color
+				+ "; border: 1px solid " + color
+				+ "; box-shadow: 3px 2px 10px " + color
+				+ ";";
+	}
+	var lists =
+	[
+		{ header: "TECHNO",
+		  color: "#91001b",
+		  content:
+			[
+				{ n: "Asura (Charlotte De Witte)", 
+				  l: "https://open.spotify.com/track/0kfCf8GLQDZFZZIhVtHZvk?si=ebd43a750d434782"
+				},
+				{ n: "Believe (Eli Brown)",
+				  l: "https://open.spotify.com/track/40up5wCfwQXTDXyE18hJbJ?si=cfe5499dd17641b6"
+				}
+			]
+		},
+		{ header: "SYNTHWAVE",
+		  color: "#ffcf22",
+		  content:
+			[
+				{ n: "Battlefield (Magic Sword)",
+				  l: "https://open.spotify.com/track/1sD6orccCuzMSA6xq2VVoK?si=08c24aae88cc4b5b"
+				},
+				{ n: "Ghostrunner OST (Daniel Deluxe",
+				  l: "https://open.spotify.com/album/6mS0ssCxtLvB0IcVP7sR66?si=9Gxchm-DS96FBUy53riL9w"
+				},
+				{ n: "Modern Fears (Electric Youth)",
+				  l: "https://open.spotify.com/track/2OzZve272q1HaQPaGqoth4?si=d97555f2878c4220"
+				},
+				{ n: "Make this Right (The Toxic Avenger)",
+				  l: "https://open.spotify.com/track/7mSmt2yar5VUXZNBV4AnpE?si=e0503968757b4b17"
+				},
+				{ n: "101km (Igor Starshinov)",
+				  l: "https://open.spotify.com/track/300TjLEgPXquwoyvTCEpBC?si=26562598962e403a"
+				},
+				{ n: "Future Club (Perturbator)",
+				  l: "https://open.spotify.com/track/20ztml2STRF7Sq1UaBB6ox?si=81b0be9cc4524931"
+				},
+				{ n: "Deficient Justice (Occams Laser)",
+				  l: "https://open.spotify.com/track/0e3bB8MeIY6GvGX988LIUk?si=14f7d23b27ba4f5d"
+				},
+				{ n: "Tension (Occams Laser)",
+				  l: "https://open.spotify.com/track/1EbBRfw3H3XWUc22Mx1bL8?si=13ab32abd07e4238"
+				}
+			]
+		},
+		{ header: "EXPERIMENTAL ELECTRONIC",
+		  color: "#6aff49",
+		  content:
+			[
+				{ n: "A Mind Is Born (Linus Akesson)",
+				  l: "https://open.spotify.com/track/3iaZ67DTsb1OouXoAIUd6y?si=c3adf85013c14d8b"
+				},
+				{ n: "Weather The Storm (Pye Corner Audio)",
+				  l: "https://open.spotify.com/track/7tukLYFGfh5osYc8uoqOmk?si=e4d029449532409b"
+				},
+				{ n: "Hollow Earth (Pye Corner Audio)",
+				  l: "https://open.spotify.com/track/4e09seMli7tAi2UcXy5lkm?si=f9067c6c79d84514"
+				},
+				{ n: "--.-....-...- (ERR_UNICODE)",
+				  l: "https://open.spotify.com/track/4akqPnWyCOWL0QNxQsXsNk?si=c741035e58d949a1"
+				},
+				{ n: "Milliseconds (Lonely Roads)",
+				  l: "https://open.spotify.com/track/6Yj3LX9pxXCIL4fZTAlYkU?si=8b891a113f134d5a"
+				},
+				{ n: "Childhood Dream (Wojchiech Golczewski)",
+				  l: "https://open.spotify.com/track/0hjlsV7bnM7HLPuIoaMfkm?si=4d55c2144b0b49d5"
+				},
+				{ n: "Nairobi (Rodriguez Jr.)",
+				  l: "https://open.spotify.com/track/6xJJXhgcVuv2fSQXSNbXHE?si=8313a608072c40f8"
+				},
+				{ n: "Quasar (Gidge)",
+				  l: "https://open.spotify.com/track/6KrnEzLSoi4XR5u3bLMPsu?si=cfdadb9960914326"
+				},
+				{ n: "New Day (Monkey Safari)",
+				  l: "https://open.spotify.com/track/7548lIowWrwIbVIbAOSewT?si=af5decf689614c83"
+				}
+			]
+		},
+		{ header: "EXPERIMENTAL",
+		  color: "#2cffff",
+		  content:
+			[
+				{ n: "Khorshid (Ali MK)",
+				  l: "https://open.spotify.com/track/1ZJaxg6gaCKMasbcWw4bqd?si=b97bc71a0a09459a"
+				},
+				{ n: "Love (Ben Lukas Boysen)",
+				  l: "https://open.spotify.com/track/4Tni0eZOEBwZ7Dd1Q4izKL?si=efcf02582a2a48d6"
+				},
+				{ n: "Éclosion (Tony Anderson)",
+				  l: "https://open.spotify.com/track/5OySktqTcVI9raXKmrdGNr?si=a5336d832d894789"
+				},
+				{ n: "Dream//Expanse (Superposition)",
+				  l: "https://open.spotify.com/track/2bkIdHnKeoHthVntelED8j?si=ecb067d11d214337"
+				}
+			]
+		},
+		{ header: "STEAMPUNK",
+		  color: "#8a522d",
+		  content:
+			[
+				{ n: "Mechanical Angel (Sunday Driver)",
+				  l: "https://open.spotify.com/track/59tCHos3X7k2nCsN9UMIDb?si=9e707cef014c46c3"
+				},
+				{ n: "Going Home Again (This Way To The Egress)",
+				  l: "https://open.spotify.com/track/6iIiccC7op1eciRb0Lierj?si=2599f00d17064810"
+				},
+				{ n: "Fighting Trousers (Professor Elemental)",
+				  l: "https://open.spotify.com/track/5d26M7OhCTM7TLeHJOFkg0?si=f1f3abf25a6042ca"
+				},
+				{ n: "Pass The Kerosene (The Peculiar Pretzelmen)",
+				  l: "https://open.spotify.com/track/55vjOZgnoEwV4WvbiH5Faa?si=1507d0310eee47da"
+				}
+			]
+		}
+	];
+	let html = "<table>";
+	html += "<tr>";
+	for (let i = 0; i<lists.length; i++)
+	{
+		let style = "style=\"" + genStyle(lists[i].color) + " text-shadow: 2px 2px 5px " + lists[i].color +  ";\"";
+		html += "<th " + style + ">" + lists[i].header + "</th>";
+	}
+	html += "</tr>";
+	let maxtries = 0;
+	// Get the maximum amount of content in a genre
+	for (let i = 0; i<lists.length; i++)
+	{
+		if (lists[i].content.length > maxtries)
+			maxtries = lists[i].content.length;
+	}
+	 
+	// Start building the content
+	for (let i = 0; i<maxtries; i++)
+	{
+		html += "<tr>";
+		for (let j = 0; j<lists.length; j++)
+		{
+			let style = "style=\"" + genStyle(lists[j].color) + "\"";
+			if (lists[j].content.length > i)
+			{
+				html += "<th class=\"av\" " + style + "><a href=\""+ lists[j].content[i].l + "\" target=\"novus\">" + lists[j].content[i].n + "</a></th>";
+			}
+			else
+				html += "<th style=\"border: 0px solid; box-shadow: 0px 0px white;\"></th>";
+		}
+		html += "<tr>";
+	}
+	html += "</table>";
+	document.getElementById("songshit").innerHTML = html;
+</script>
