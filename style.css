@@ -104,6 +104,7 @@ div.box-blue:hover
 {
 	border-color: #0cdfff;
 	box-shadow: 3px 3px 8px #0cdfff, 12px 12px 20px #0cdfff;
+	text-shadow: 0 0 20px #0cdfff;
 	border-radius: 20px;
 }
 div.box-green
@@ -120,6 +121,7 @@ div.box-green:hover
 {
 	border-color: #3bdf00;
 	box-shadow: 3px 3px 8px #3bdf00, 12px 12px 20px #3bdf00;
+	text-shadow: 0 0 20px #3bdf00;
 	border-radius: 20px;
 }
 div.box-orange
@@ -127,7 +129,6 @@ div.box-orange
 	border-style: solid;
 	border-color: #dcb300;
 	border-radius: 8px;
-	text-shadow: 0 0 5px var(--glow-accent-color);
 	margin: 20px;
 	padding: 20px;
 	box-shadow: 1px 1px 5px #dcb300, 10px 10px 20px #dcb300;
@@ -137,6 +138,7 @@ div.box-orange:hover
 {
 	border-color: #ffcc00;
 	box-shadow: 3px 3px 8px #ffcc00, 12px 12px 20px #ffcc00;
+	text-shadow: 0 0 20px #ffcc00;
 	border-radius: 20px;
 }
 div.move-stripes
