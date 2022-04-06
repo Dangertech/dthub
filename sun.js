@@ -1,8 +1,27 @@
 let sun = {"src": document.getElementById("sun").getAttribute("src"), "width": 3840, "height": 1164};
 let gradient_diff = 0, gradient_from = 100, gradient_to = 70;
 let wobble_min = 20;
-const sunStyle = document.createElement('style');
 
+
+// Initiate the div properties
+let sunObj = document.getElementById('sun');
+sunObj.style.backgroundSize = "contain";
+sunObj.style.backgroundRepeat = "no-repeat";
+sunObj.style.backgroundImage = "url(\"" + sun.src + "\")";
+
+
+// Apply the changes
+function apply(mv, bg_percent)
+{
+	document.body.style.backgroundImage = 
+		"linear-gradient(var(--main-bg-color) " + bg_percent.toString() + `%, #e30088 100%)`;
+	sunObj.style.paddingTop = (sun.height/(sun.width/window.innerWidth)).toString() + "px";
+	sunObj.style.backgroundPosition = "center " + mv.toString() + "px";
+}
+
+var time = 0; // Time in animation
+var mv = sun.height;
+var bg_percent = 100; // How much is dark on the bg
 
 // Actual ease driver
 // Is reversed in the calculation to become ease out
@@ -11,30 +30,7 @@ function ease_in(time)
 	return time*time*time;
 }
 
-// Write to the document
-function apply(mv, bg_percent, mySun)
-{
-	sunStyle.innerHTML = `
-	body
-	{
-		background-image: linear-gradient(var(--main-bg-color) ` + bg_percent.toString() + `%, #e30088 100%);
-	}
-	#sun
-	{
-		padding-top: ` + (mySun.height/(mySun.width/window.innerWidth)).toString() + `px;
-		background-image: url("` + mySun.src + `");
-		background-size: contain;
-		background-repeat: no-repeat;
-		background-position: center ` + mv.toString() + `px;
-	}
-	`;
-	document.head.appendChild(sunStyle);
 
-}
-
-var time = 0; // Time in animation
-var mv = sun.height;
-var bg_percent = 100; // How much is dark on the bg
 
 var riseRunner, shineRunner; // Access to the running intervals
 function rise()
@@ -84,7 +80,7 @@ function shine()
 		time = 0;
 	}
 	// Write
-	apply(mv, bg_percent, sun);
+	apply(mv, bg_percent);
 }
 
 

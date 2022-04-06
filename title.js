@@ -62,13 +62,15 @@ function setquote(id = Math.floor(Math.random() * quotes.length))
 	console.log("Set quote", id + "!");
 }
 
+///// LOGO STUFF
 
 // Animates the background of the dthub logo to have a soft glow
 let logo = document.getElementById("logo");
 logo.setAttribute("class", "marginauto");
 logo.src = headerTarget.getAttribute("logosrc");
+logo.style.maxHeight = "88px";
+logo.style.marginTop = "30px";
 // Avoid milisecond glitch on website load
-logo.style="max-height: 88px; margin-top: 30px;";
 
 const percentageStep = 1, percentageInterval = 100;
 const minPercentage = 50, maxPercentage = 75;
@@ -88,7 +90,7 @@ setInterval(() =>
 		}
 		 
 		//Edit the style
-		logo.style = `background-image: radial-gradient(purple, transparent ` + percentage.toString() + `%); max-height: 88px; margin-top: 30px;`
+		logo.style.backgroundImage = 'radial-gradient(purple, transparent ' + percentage.toString() + '%)';
 		if (percentage >= maxPercentage)
 			negative = true;
 		else if (percentage <= minPercentage)
