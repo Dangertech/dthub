@@ -156,6 +156,56 @@ a.pipe
 	text-shadow: 0 0 6px darkmagenta;
 }
 
+.news
+{
+	margin-top: 40px;
+	margin-bottom: 40px;
+	margin-left: 8%;
+	margin-right: 8%;
+	border-color: #e30088;
+	background: #e3008830;
+	padding: 20px;
+	border-style: solid;
+	border-radius: 8px;
+	box-shadow: 0px 0px 8px #e30088, inset 0 0 0 0;
+	transition: 0.3s;
+}
+.news:hover
+{
+	transition: 0.3s;
+	box-shadow: 0px 0px 8px #e30088, inset 0px 0px 12px #e30088;
+}
+.news > .wrapper
+{
+	overflow: hidden;
+	padding: 10px;
+	border: dashed;
+	border-radius: 8px;
+	border-color: #e30088;
+	background: #e3008880;
+	box-shadow: inset 0px 0px 8px #e30088, 0px 0px 8px #e30088;
+	transition: 0.3s;
+}
+.news > .wrapper:hover
+{
+	transition: 0.3s;
+	box-shadow: inset 0px 0px 20px #e30088, 0px 0px 8px #e30088;
+}
+.wrapper > .title
+{
+	color: #fcee0c;
+	font-size: 30px;
+	font-weight: 800;
+	text-shadow: 0px 0px 8px #fcee0c;
+	float: left;
+}
+.wrapper > .date
+{
+	float: right;
+	color: #39ff14;
+	font-size: 30px;
+	font-weight: 600;
+}
 
 /* Headings are brighter on hover */
 h1, h2, h3, h4, h5, h6
@@ -191,6 +241,19 @@ ul
 {
 	list-style: "> ";
 }
+
+li
+{
+	transition: 0.3s;
+	margin-left: 0px;
+}
+li:hover
+{
+	transition: 0.3s;
+	margin-left: 10px;
+}
+
+
 
 
 /* Blinking, for example text cursor */
