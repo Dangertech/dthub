@@ -1,7 +1,11 @@
 // Basic stuff
 const headerTarget = document.getElementById("title");
 
-headerTarget.innerHTML = `<img id="logo" onclick="toStart()"></img><div id="quote"></div>`;
+headerTarget.innerHTML = `<img id="logo" onclick="toStart()"></img>
+	<div id="quoteContainer">
+		<div id="quote"></div>
+	</div>`
+;
 
 function toStart()
 {
@@ -48,17 +52,20 @@ setquote();
 // Default argument is random, can be overriden with any value
 function setquote(id = Math.floor(Math.random() * quotes.length))
 {
-
+	let target = document.getElementById("quoteContainer");
 	let elem = document.createElement("div");
 	elem.innerHTML = quotes[id];
-	elem.setAttribute("class", "center");
-	elem.style = "text-align: center; color: #ffffff";
-	elem.setAttribute("onclick", "setquote()");
+	elem.style.position = "relative";
+	elem.style.right = "-" + (quotes[id].length * 14).toString() + "px";
+	elem.style.whiteSpace = "nowrap";
+	elem.style.textAlign = "center"; 
+	elem.style.Color = "#ffffff";
+	elem.onclick = "setquote()";
 	elem.setAttribute("id", "quote");
 	if (document.getElementById("quote") == undefined)
-		headerTarget.appendChild(elem);
+		target.appendChild(elem);
 	else
-		headerTarget.replaceChild(elem, document.getElementById("quote"));
+		target.replaceChild(elem, document.getElementById("quote"));
 	console.log("Set quote", id + "!");
 }
 
@@ -72,14 +79,14 @@ logo.style.maxHeight = "88px";
 logo.style.marginTop = "30px";
 // Avoid milisecond glitch on website load
 
-const percentageStep = 1, percentageInterval = 100;
+const percentageStep = 0.2, percentageInterval = 15;
 const minPercentage = 50, maxPercentage = 75;
 
 let percentage = 50;
 let negative = false;
 setInterval(() =>
 	{
-
+		let ticker = document.getElementById("quote");
 		if (negative == false)
 		{
 			percentage += percentageStep;
@@ -96,5 +103,11 @@ setInterval(() =>
 		else if (percentage <= minPercentage)
 		{
 			negative = false;
+		}
+		let newVal = parseInt(ticker.style.right) + 2;
+		ticker.style.right = newVal.toString() + "px";
+		if (newVal > window.innerHeight)
+		{
+			setquote();
 		}
 	}, percentageInterval);
