@@ -34,7 +34,7 @@ function handleData(profile, repos)
 			<b>Public Repos:</b> ` + profile.public_repos + "<br>"  + "<ul>";
 	for (let i = 0; i<repos.length; i++)
 	{
-		html += "<li>> <a href="+ repos[i].html_url + ">" + repos[i].name + "</a> </li>";
+		html += "<li><a href="+ repos[i].html_url + ">" + repos[i].name + "</a> </li>";
 	}
 	html += `
 		</ul>
