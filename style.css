@@ -32,6 +32,20 @@ img.radial-bg
 	background-image: radial-gradient(purple, transparent var(--blink-percentage));
 }
 
+#quoteContainer
+{
+	overflow: hidden;
+	border: 1px solid purple;
+	box-shadow: 0px 0px 10px purple;
+}
+
+/* For quotes, see title.js */
+@keyframes rtl-move
+{
+	from {right: -100%;}
+	to {right: 50%;}
+}
+
 th
 {
 	font-size: min(1.4vw, 16px);

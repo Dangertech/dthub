@@ -49,24 +49,31 @@ const quotes =
 
 setquote();
 
+var quote_creation_stamp;
 // Default argument is random, can be overriden with any value
 function setquote(id = Math.floor(Math.random() * quotes.length))
 {
 	let target = document.getElementById("quoteContainer");
-	let elem = document.createElement("div");
+	let elem = document.createElement("span");
 	elem.innerHTML = quotes[id];
-	elem.style.position = "relative";
-	elem.style.right = "-" + (quotes[id].length * 14).toString() + "px";
-	elem.style.whiteSpace = "nowrap";
-	elem.style.textAlign = "center"; 
-	elem.style.Color = "#ffffff";
-	elem.onclick = "setquote()";
+	elem.setAttribute("onclick", "setquote()");
+	elem.setAttribute("style",
+	`
+	position: relative;
+	overflow: hidden;
+	white-space: nowrap;
+	animation-name: rtl-move;
+	animation-duration: 12s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	`);
 	elem.setAttribute("id", "quote");
 	if (document.getElementById("quote") == undefined)
 		target.appendChild(elem);
 	else
 		target.replaceChild(elem, document.getElementById("quote"));
-	console.log("Set quote", id + "!");
+	quote_creation_stamp = Date.now();
+	console.log("Set quote", id + ", on", quote_creation_stamp + "!");
 }
 
 ///// LOGO STUFF
@@ -104,10 +111,7 @@ setInterval(() =>
 		{
 			negative = false;
 		}
-		let newVal = parseInt(ticker.style.right) + 2;
-		ticker.style.right = newVal.toString() + "px";
-		if (newVal > window.innerHeight)
-		{
-			setquote();
-		}
+		// Watch for quote change
+		if (Date.now() - quote_creation_stamp > 12000)
+			setquote()
 	}, percentageInterval);
