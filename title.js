@@ -1,10 +1,40 @@
 // Basic stuff
 const headerTarget = document.getElementById("title");
 
-headerTarget.innerHTML = `<img id="logo" onclick="toStart()"></img>
+headerTarget.innerHTML = 
+`
+	<div style="display: flex; justify-content: center; margin-top: 30px;
+		margin-bottom: 30px; align-items: center;">
+		<ul class="navbar" style="float: center;">
+			<li>
+				<a href="leads/future.html">future</a>
+			</li>
+			<li class="last">
+				<a href="leads/projects.html">projects</a>
+			</li>
+			<li class="sep">
+				- // -
+			</li>
+		</ul>
+		<img style="float: center; height: 7vw;
+			margin-left:0.3vw; margin-right: 0.3vw;"
+			id="logo" onclick="toStart()"></img>
+		<ul class="navbar" style="float:center;">
+			<li class="sep">
+				- // -
+			</li>
+			<li>
+				<a href="leads/pi.html">pi</a>
+			</li>
+			<li class="last">
+				<a href="leads/musictable.html">musictable</a>
+			</li>
+		</ul>
+	</div>
 	<div id="quoteContainer">
 		<div id="quote"></div>
-	</div>`
+	</div>
+`
 ;
 
 function toStart()
@@ -80,12 +110,9 @@ function setquote(id = Math.floor(Math.random() * quotes.length))
 
 // Animates the background of the dthub logo to have a soft glow
 let logo = document.getElementById("logo");
-logo.setAttribute("class", "marginauto");
 logo.src = headerTarget.getAttribute("logosrc");
-logo.style.maxHeight = "88px";
-logo.style.marginTop = "30px";
-// Avoid milisecond glitch on website load
 
+// Avoid milisecond glitch on website load
 const percentageStep = 0.2, percentageInterval = 15;
 const minPercentage = 50, maxPercentage = 75;
 
