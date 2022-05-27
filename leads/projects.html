@@ -2,14 +2,14 @@
 	<head>
 		<title>dthub/projects</title>
 		<script src="../sun.js" async></script>
-		<script src="../title.js" async></script>
+		<script src="../title.js" defer></script>
 		<link rel="stylesheet" href="../style.css">
 	</head>
 	<body>
-		<div id="title" logosrc="../sources/dthublogo.png"></div>
+		<div id="title" logosrc="../sources/dthublogo.png" leads=""></div>
 		 
 		<!Entry point for script>
-		<div id="pipeline" class="center"></div>
+		<div id="pipeline"></div>
 		 
 		<div id="sun" src="../sources/Synthcity.keyed.png"></div>
 	</body>
@@ -91,6 +91,21 @@
 	var doing =
 		[
 			{
+				title: "EXPECT", link: "https://github.com/dangertech/expect",
+				attributes: `C++ SFML graphical 
+					[free and open source, minimalistic, procedurally generated,
+					open-world, sci-fi cyberpunk traditional roguelike written in C++]
+					`,
+				description: 
+				`
+				An ambitious project I am writing as a challenge. The only
+				conditions are what you see above in the square brackets. I am
+				planning to share my progress extensively on this website
+				and maybe some other format, like a blog. You can read design
+				docs in the github repo in the 'garden' directory.
+				`
+			},
+			{
 				title: "schreps", link: "https://github.com/Dangertech/schreps", attributes: "JavaScript Screeps",
 				description:
 				`
@@ -160,7 +175,7 @@
 				`
 			}
 		];
-
+	
 	function formatEntry(entry, type)
 	{
 		// Decide variables based on type
@@ -184,11 +199,11 @@
 		html += "<div class=\"" + boxType + "\">";
 		// Title
 		if (entry.link != null && entry.link != undefined)
-			html += "<a class=\"pipe\" href=\"" + entry.link + "\">" + entry.title + "</a> "; 
+			html += "<a class=\"pipe\" href=\"" + entry.link + "\" target=\"new\">" + entry.title + "</a> "; 
 		else
-			html += "<pipe class=\"title\">" + entry.title + "</pipe> "; 
+			html += "<pipe class=\"title\" style=\"font-size: 2vw;\">" + entry.title + "</pipe> "; 
 		// Attributes
-		html += "<pipe class=\"attribute\">" + entry.attributes + "</pipe>";
+		html += "<pipe class=\"attribute\" style=\"font-size: 0.8vw\">" + entry.attributes + "</pipe>";
 		 
 		html += "<br>";
 		 
@@ -197,20 +212,25 @@
 		html += "</div>";
 		return html;
 	}
+	
+	
 	// Start putting items into document
 	let pipeloc = document.getElementById("pipeline");
 	let html = "";
-	html += "<h3 style=\"text-align: center;\">Done</h3>"
-		 + "<div>";
+	html += "<div style=\"display: flex\">"
+		+ "<div>"
+		+ "<h3 style=\"text-align: center;\">Done</h3>";
 	for (let i in done)
 		html += formatEntry(done[i], "done");
-	html += "</div><h3 style=\"text-align: center;\">Doing</h3><div>";
+	html += "</div><div><h3 style=\"text-align: center;\">Doing</h3>";
 	for (let i in doing)
 		html += formatEntry(doing[i], "doing");
-	html += "</div><h3 style=\"text-align: center;\">To-Do</h3><div>";
+	html += "</div><div><h3 style=\"text-align: center;\">To-Do</h3>";
 	for (let i in todo)
 		html += formatEntry(todo[i], "todo");
-
+	html += "</div>"
+		+ "</div>"; // End of flexbox
+	
 	pipeloc.innerHTML = html;
 </script>
 

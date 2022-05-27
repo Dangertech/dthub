@@ -1,5 +1,8 @@
 // Basic stuff
 const headerTarget = document.getElementById("title");
+var leads = headerTarget.getAttribute("leads");
+if (leads == undefined)
+	leads = "";
 
 headerTarget.innerHTML = 
 `
@@ -7,16 +10,16 @@ headerTarget.innerHTML =
 		margin-bottom: 30px; align-items: center;">
 		<ul class="navbar" style="float: center;">
 			<li>
-				<a href="leads/future.html">future</a>
+				<a href="`+ leads + `future.html">future</a>
 			</li>
 			<li class="last">
-				<a href="leads/projects.html">projects</a>
+				<a href="` + leads + `projects.html">projects</a>
 			</li>
 			<li class="sep">
 				- // -
 			</li>
 		</ul>
-		<img style="float: center; height: 7vw;
+		<img style="float: center; height: 5vw;
 			margin-left:0.3vw; margin-right: 0.3vw;"
 			id="logo" onclick="toStart()"></img>
 		<ul class="navbar" style="float:center;">
@@ -24,10 +27,10 @@ headerTarget.innerHTML =
 				- // -
 			</li>
 			<li>
-				<a href="leads/pi.html">pi</a>
+				<a href="` + leads + `pi.html">pi</a>
 			</li>
 			<li class="last">
-				<a href="leads/musictable.html">musictable</a>
+				<a href="` + leads + `musictable.html">musictable</a>
 			</li>
 		</ul>
 	</div>
@@ -39,7 +42,10 @@ headerTarget.innerHTML =
 
 function toStart()
 {
-	window.location.replace("../index.html");
+	let prop_idx = headerTarget.getAttribute("idx");
+	if (prop_idx == undefined)
+		prop_idx = "../index.html";
+	window.location.replace(prop_idx);
 }
 // QUOTES
 const quotes = 
@@ -74,7 +80,9 @@ const quotes =
 	"You can't defeat <i>me</i>!",
 	"The communists have declared war on me. I must defend myself!",
 	"*<i>has impostor syndrome</i>*",
-	"Your one stop shop for the truth of everything!"
+	"Your one stop shop for the truth of everything!",
+	"You will be able to put your own stuff here soon!",
+	"Await greatness, visitor"
 ];
 
 setquote();
