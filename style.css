@@ -22,7 +22,6 @@ ul.navbar
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
-	overflow: hidden;
 }
 
 ul.navbar > li
@@ -30,26 +29,56 @@ ul.navbar > li
 	float: left;
 	display: block;
 	color: purple;
-	padding: 0.3vw;
+	padding: min(0.3vw, 20px);
 	padding-right: 1vw;
 	padding-left: 1vw;
 	margin-left: 0px;
 	margin-right: 0px;
-	font-size: 1.5vw;
+	font-size: min(1.5vw, 20px);
 }
 
 ul.navbar > li:not(.sep)
 {
-	border-top: 0.01vw solid;
-	border-left: 0.01vw solid;
-	border-bottom: 0.01vw solid;
-	box-shadow: inset 0px 0px 0.3vw purple;
+	border-top: 1px solid;
+	border-left: 1px solid;
+	border-bottom: 1px solid;
+	box-shadow: inset 0px 0px min(0.3vw, 4px) purple;
 }
 
 ul.navbar > li:not(.sep):hover
 {
 	margin-left: 0px;
-	box-shadow: inset 0px 0px 1vw purple;
+	box-shadow: inset 0px 0px min(1vw, 10px) purple;
+}
+
+ul.navbar > li.special:hover
+{
+	box-shadow: inset 0px 0px min(1vw, 10px) var(--glow-accent-color);
+}
+
+ul.navbar > li.dropdown
+{
+	position: relative;
+	display: inline-block;
+}
+
+ul.navbar > li.special
+{
+	color: var(--glow-accent-color);
+}
+
+.dropdown-content
+{
+	display: none;
+	position: absolute;
+	background-color: green;
+	min-width: 400px;
+	z-index: 12;
+}
+
+.dropdown:hover .dropdown-content
+{
+	display: block;
 }
 
 ul.navbar > li.sep
@@ -59,7 +88,7 @@ ul.navbar > li.sep
 
 ul.navbar > li.last
 {
-	border-right: 0.1vw solid;
+	border-right: 1px solid;
 }
 
 img
@@ -311,7 +340,7 @@ li
 	transition: 0.3s;
 	margin-left: 0px;
 }
-li:hover
+ul.hover > li:hover
 {
 	transition: 0.3s;
 	margin-left: 10px;

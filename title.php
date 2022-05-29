@@ -12,8 +12,15 @@ headerTarget.innerHTML =
 			<li>
 				<a href="`+ leads + `future.html">future</a>
 			</li>
-			<li class="last">
+			<li>
 				<a href="` + leads + `projects.html">projects</a>
+			</li>
+			<li class="dropdown special last">
+				EXPECT Blog
+				<ul class="dropdown-content">
+					<li>Auto-Generated Entry 1</li>
+					<li>Auto-Generated Entry 2</li>
+				</ul>
 			</li>
 			<li class="sep">
 				- // -
@@ -119,7 +126,7 @@ function setquote(id = Math.floor(Math.random() * quotes.length))
 // Animates the background of the dthub logo to have a soft glow
 let logo = document.getElementById("logo");
 logo.src = headerTarget.getAttribute("logosrc");
-
+ 
 // Avoid milisecond glitch on website load
 const percentageStep = 0.2, percentageInterval = 15;
 const minPercentage = 50, maxPercentage = 75;

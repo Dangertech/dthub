@@ -4,7 +4,7 @@
 		<title>dthub</title>
 		<link rel="stylesheet" href="style.css">
 		<!Makes the title>
-		<script src="title.js" defer></script>
+		<script src="title.php" defer></script>
 		<!Moves the synthetik sun>
 		<script src="sun.js" defer></script>
 		<!github API>
@@ -78,7 +78,7 @@
 		<br>
 
 		<h2 class="center hover">https://dangers.works</h2>
-		<ul class="center">
+		<ul class="center hover">
 			<li>
 				<a href="leads/future.html">/future</a>
 			</li>
