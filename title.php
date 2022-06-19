@@ -3,6 +3,8 @@ const headerTarget = document.getElementById("title");
 var leads = headerTarget.getAttribute("leads");
 if (leads == undefined)
 	leads = "";
+// Set a cookie to access the js var in php (Stupid bodge, I know)
+document.cookie="leads_path="+leads;
 
 headerTarget.innerHTML = 
 `
@@ -12,8 +14,21 @@ headerTarget.innerHTML =
 			<li>
 				<a href="`+ leads + `future.html">future</a>
 			</li>
-			<li class="last">
+			<li>
 				<a href="` + leads + `projects.html">projects</a>
+			</li>
+			<li class="dropdown special last">
+				EXPECT Blog
+				<ul class="dropdown-content">
+					<?php 
+						foreach (new DirectoryIterator('../EXPECT/garden/blogs') as $file) 
+						{
+								if($file->isDot()) continue;
+								print '<li><a href="' . $_COOKIE['leads_path'] . 'blog.php?name='
+									. $file->getFilename() . '">' . $file->getFilename() . '</a></li>';
+						}
+					?>
+				</ul>
 			</li>
 			<li class="sep">
 				- // -
@@ -32,6 +47,7 @@ headerTarget.innerHTML =
 			<li class="last">
 				<a href="` + leads + `musictable.html">musictable</a>
 			</li>
+			<li class="invisible"></li>
 		</ul>
 	</div>
 	<div id="quoteContainer">
@@ -44,7 +60,7 @@ function toStart()
 {
 	let prop_idx = headerTarget.getAttribute("idx");
 	if (prop_idx == undefined)
-		prop_idx = "../index.html";
+		prop_idx = "../index.php";
 	window.location.replace(prop_idx);
 }
 // QUOTES
@@ -119,7 +135,7 @@ function setquote(id = Math.floor(Math.random() * quotes.length))
 // Animates the background of the dthub logo to have a soft glow
 let logo = document.getElementById("logo");
 logo.src = headerTarget.getAttribute("logosrc");
-
+ 
 // Avoid milisecond glitch on website load
 const percentageStep = 0.2, percentageInterval = 15;
 const minPercentage = 50, maxPercentage = 75;

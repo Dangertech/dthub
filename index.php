@@ -4,7 +4,7 @@
 		<title>dthub</title>
 		<link rel="stylesheet" href="style.css">
 		<!Makes the title>
-		<script src="title.js" defer></script>
+		<script src="title.php" defer></script>
 		<!Moves the synthetik sun>
 		<script src="sun.js" defer></script>
 		<!github API>
@@ -14,6 +14,15 @@
 	<body>
 		<!Created by title.js>
 		<div id="title" logosrc="sources/dthublogo.png" leads="leads/" idx="index.html"></div>
+		<div class="news" title="Real nice BLOGS!" date="2022-06-19">
+			Yay, Just select one of the blogs from the new dropdown in the navbar!
+			It's easy, it's fun, it's informative! In the first blog, I give a 
+			short info on how I set up this system and in the follow-ups, 
+			I plan to give
+			in-depth information on the development and my though processes 
+			on the <a href="https://github.com/Dangertech/expect" target="ur mom">
+				EXPECT</a> video game!
+		</div>
 		<div class="news" title="EXPECT has begun development!" date="2022-05-09">
 			EXPECT is a 3-year challenge I was assigned to make a
 			<gl>
@@ -78,7 +87,7 @@
 		<br>
 
 		<h2 class="center hover">https://dangers.works</h2>
-		<ul class="center">
+		<ul class="center hover">
 			<li>
 				<a href="leads/future.html">/future</a>
 			</li>
