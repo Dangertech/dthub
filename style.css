@@ -37,7 +37,8 @@ ul.navbar > li
 	font-size: min(1.5vw, 20px);
 }
 
-ul.navbar > li:not(.sep)
+
+ul.navbar > li:not(.sep):not(.invisible)
 {
 	border-top: 1px solid;
 	border-left: 1px solid;
@@ -45,7 +46,13 @@ ul.navbar > li:not(.sep)
 	box-shadow: inset 0px 0px min(0.3vw, 4px) purple;
 }
 
-ul.navbar > li:not(.sep):hover
+ul.navbar > li.invisible
+{
+	color: rgba(0,0,0,0);
+	min-width: 5vw;
+}
+
+ul.navbar > li:not(.sep):not(.invisible):hover
 {
 	margin-left: 0px;
 	box-shadow: inset 0px 0px min(1vw, 10px) purple;
@@ -71,14 +78,21 @@ ul.navbar > li.special
 {
 	display: none;
 	position: absolute;
-	background-color: green;
-	min-width: 400px;
+	min-width: 15vw;
+	margin: min(0.3vw, 20px) -1vw;
 	z-index: 12;
+	border: 1px dashed;
+	box-shadow: 0px 0px min(1vw, 10px) var(--glow-accent-color);
 }
 
 .dropdown:hover .dropdown-content
 {
 	display: block;
+}
+
+.dropdown-content > li:hover
+{
+	text-shadow: 0 0 5px var(--glow-accent-color);
 }
 
 ul.navbar > li.sep

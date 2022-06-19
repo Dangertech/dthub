@@ -3,6 +3,8 @@ const headerTarget = document.getElementById("title");
 var leads = headerTarget.getAttribute("leads");
 if (leads == undefined)
 	leads = "";
+// Set a cookie to access the js var in php (Stupid bodge, I know)
+document.cookie="leads_path="+leads;
 
 headerTarget.innerHTML = 
 `
@@ -18,8 +20,14 @@ headerTarget.innerHTML =
 			<li class="dropdown special last">
 				EXPECT Blog
 				<ul class="dropdown-content">
-					<li>Auto-Generated Entry 1</li>
-					<li>Auto-Generated Entry 2</li>
+					<?php 
+						foreach (new DirectoryIterator('../EXPECT/garden/blogs') as $file) 
+						{
+								if($file->isDot()) continue;
+								print '<li><a href="' . $_COOKIE['leads_path'] . 'blog.php?name='
+									. $file->getFilename() . '">' . $file->getFilename() . '</a></li>';
+						}
+					?>
 				</ul>
 			</li>
 			<li class="sep">
@@ -39,6 +47,7 @@ headerTarget.innerHTML =
 			<li class="last">
 				<a href="` + leads + `musictable.html">musictable</a>
 			</li>
+			<li class="invisible"></li>
 		</ul>
 	</div>
 	<div id="quoteContainer">
@@ -51,7 +60,7 @@ function toStart()
 {
 	let prop_idx = headerTarget.getAttribute("idx");
 	if (prop_idx == undefined)
-		prop_idx = "../index.html";
+		prop_idx = "../index.php";
 	window.location.replace(prop_idx);
 }
 // QUOTES
