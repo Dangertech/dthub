@@ -3,8 +3,7 @@ const headerTarget = document.getElementById("title");
 var leads = headerTarget.getAttribute("leads");
 if (leads == undefined)
 	leads = "";
-// Set a cookie to access the js var in php (Stupid bodge, I know)
-document.cookie="leads_path="+leads;
+console.log(leads);
 
 headerTarget.innerHTML = 
 `
@@ -26,7 +25,10 @@ headerTarget.innerHTML =
 							foreach (new DirectoryIterator('../EXPECT/garden/blogs') as $file) 
 							{
 									if($file->isDot()) continue;
-									print '<li><a href="' . $_COOKIE['leads_path'] . 'blog.php?name='
+									// To work around the awfulness of file paths in 
+									// webdev, two blog.php instances are at the root (/)
+									// AND leads/ (It's very sad, I know)
+									print '<li><a href="' . 'blog.php?name='
 										. $file->getFilename() . '">' . $file->getFilename() . '</a></li>';
 							}
 						}
