@@ -20,12 +20,19 @@ headerTarget.innerHTML =
 			<li class="dropdown special last">
 				EXPECT Blog
 				<ul class="dropdown-content">
-					<?php 
-						foreach (new DirectoryIterator('../EXPECT/garden/blogs') as $file) 
+					<?php
+						if (is_dir('../EXPECT/garden/blogs'))
 						{
-								if($file->isDot()) continue;
-								print '<li><a href="' . $_COOKIE['leads_path'] . 'blog.php?name='
-									. $file->getFilename() . '">' . $file->getFilename() . '</a></li>';
+							foreach (new DirectoryIterator('../EXPECT/garden/blogs') as $file) 
+							{
+									if($file->isDot()) continue;
+									print '<li><a href="' . $_COOKIE['leads_path'] . 'blog.php?name='
+										. $file->getFilename() . '">' . $file->getFilename() . '</a></li>';
+							}
+						}
+						else
+						{
+							print '<li>No blogs accessible.</li>';
 						}
 					?>
 				</ul>
