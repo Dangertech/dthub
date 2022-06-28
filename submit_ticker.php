@@ -22,7 +22,7 @@
 				echo $prop;
 				
 				# Now process the submission and actually put it into the file
-				if ($prop != "" && strpos($prop, '\"'))
+				if ($prop != "")
 				{
 					$file = fopen("/var/www/tickermsgs.txt", "a");
 					fwrite($file, $prop ."\n");
