@@ -76,7 +76,7 @@ function toStart()
 const quotes = 
 [
 	<?php
-		$file = fopen("/var/www/tickermsgs.txt", "r") or die('"Unable to open ticker messages"');
+		$file = fopen("/var/www/tickermsgs.txt", "r") or print('"Unable to open ticker messages"');
 		while (!feof($file))
 		{
 			$line = fgets($file);
