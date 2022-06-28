@@ -24,7 +24,7 @@
 				# Now process the submission and actually put it into the file
 				if ($prop != "" && strpos($prop, '\"'))
 				{
-					$file = fopen("tickermsgs.txt", "a");
+					$file = fopen("/var/www/tickermsgs.txt", "a");
 					fwrite($file, $prop ."\n");
 					fclose($file);
 				}
@@ -42,7 +42,7 @@
 			<br>
 			<br>
 			<?php
-				$file = fopen("tickermsgs.txt", "r");
+				$file = fopen("/var/www/tickermsgs.txt", "r");
 				$i = 0;
 				while (!feof($file))
 				{
