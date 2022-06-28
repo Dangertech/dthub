@@ -37,22 +37,22 @@
 			Reload the page (and wait long enough) to see your message appear
 			eventually!
 			
-			To validate that the ticker message was added, here is a printout
-			of all available messages:
+			<! To validate that the ticker message was added, here is a printout
+			of all available messages:!>
 			<br>
 			<br>
 			<?php
-				$file = fopen("/var/www/tickermsgs.txt", "r");
-				$i = 0;
-				while (!feof($file))
-				{
-					$line = fgets($file);
-					if ($line != "")
-					{
-						$i++;
-						echo '<gl>'.$i.'</gl>    '.$line.'<br>';
-					}
-				}
+				#$file = fopen("/var/www/tickermsgs.txt", "r");
+				#$i = 0;
+				#while (!feof($file))
+				#{
+				#	$line = fgets($file);
+				#	if ($line != "")
+				#	{
+				#		$i++;
+				#		echo '<gl>'.$i.'</gl>    '.$line.'<br>';
+				#	}
+				#}
 			?>
 		</p>
 		<div id="sun" src="../sources/Synthcity.keyed.png"></div>
