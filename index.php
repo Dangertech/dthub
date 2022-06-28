@@ -13,7 +13,7 @@
 
 	<body>
 		<!Created by title.js>
-		<div id="title" logosrc="sources/dthublogo.png" leads="leads/" idx="index.html"></div>
+		<div id="title" logosrc="sources/dthublogo.png" leads="leads/" idx="index.php"></div>
 		<div class="news" title="Real nice BLOGS!" date="2022-06-19">
 			Yay, Just select one of the blogs from the new dropdown in the navbar!
 			It's easy, it's fun, it's informative! In the first blog, I give a 
@@ -105,11 +105,29 @@
 			I want to make the link list up here a bit more sexy,
 			so it looks like a <gl>real directory tree</gl>.
 		</p>
+		<h2 class="center hover"><gl>$</gl> dthub --add-ticker-message</h2>
 		<p class="center">
-			Also, I know that there's a bug with the <gl>SYNTHETIK SUN</gl>
-			not displaying correctly at the bottom of the page. It's very
-			annoying and not really fixable, but I have an idea for a workaround.
+			And this is it, ladies and gentlemen, the great social experiment 
+			of the millenium (not really, we have 4chan that's definitely 
+			grander): A way to submit your own ticker messages that will be displayed
+			on this website, with absolutely no profanity filter. The only rule
+			is that your submission must be between 4 and 140 characters long
+			(sounds familiar, huh?) and mustn't be empty! Your submission will be
+			processed and made available instantly to all other visitors of this
+			website. Go now, think of something
+			funny and put it into the ticker (however, please don't try to exploit
+			anything, the input isn't very sanitized).
+			<br>
+			<br>
+			However, please not that I might occasionally go over the message
+			list and delete some ticker messages for any reason or no reason at all.
 		</p>
+		<form class="center" action="/submit_ticker.php" method="get">
+			<label for="content"><gl class="special">Ticker submission:</gl></label><br>
+			<input type="text" name="content" minlength="4" maxlength="140"
+				placeholder="My awesome and definitely not questionable suggestion"><br>
+			<input type="submit" value="Send">
+		</form>
 		<! Set again by the sun.js script>
 		<div id="sun" src="sources/Synthcity.keyed.png"></div>
 	</body>

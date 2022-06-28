@@ -133,7 +133,7 @@ img.radial-bg
 @keyframes rtl-move
 {
 	from {right: -100%;}
-	to {right: 1000px;}
+	to {right: 1500px;}
 }
 
 th
@@ -360,6 +360,33 @@ ul.hover > li:hover
 	margin-left: 10px;
 }
 
+input[type=text]
+{
+	width: 70%;
+	border-radius: 6px;
+	border: 0px dashed purple;
+	box-shadow: 0px 0px 10px black;
+	padding: 4px;
+	margin-top: 6px;
+	margin-bottom: 12px;
+}
+
+input[type=submit]
+{
+	background-color: #00000000;
+	border: 3px dashed var(--glow-accent-color);
+	color: var(--glow-accent-color);
+	box-shadow: 0px 0px 5px 2px var(--glow-accent-color);
+	transition: 0.3s;
+	font-family: "Courier New", "Lucida Console", monospace;
+}
+input[type=submit]:hover
+{
+	border: 3px dashed var(--glow-hover-color);
+	color: var(--glow-hover-color);
+	background-color: #ddd50050;
+	box-shadow: 0px 0px 8px 4px var(--glow-hover-color);
+}
 
 
 
