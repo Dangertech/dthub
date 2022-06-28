@@ -77,17 +77,20 @@ const quotes =
 [
 	<?php
 		$file = fopen("/var/www/tickermsgs.txt", "r") or print('"Unable to open ticker messages"');
-		while (!feof($file))
+		if($file)
 		{
-			$line = fgets($file);
-			if ($line != "")
+			while (!feof($file))
 			{
-				$line = substr($line, 0, -1);
-				echo '`'. $line . '`,';
+				$line = fgets($file);
+				if ($line != "")
+				{
+					$line = substr($line, 0, -1);
+					echo '`'. $line . '`,';
+				}
 			}
+			echo '""';
+			fclose($file);
 		}
-		echo '""';
-		fclose($file);
 	?>
 ];
 
