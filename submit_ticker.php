@@ -8,7 +8,7 @@
 		<script src="../sun.js" defer></script>
 	</head>
 	<body>
-		<div id="title" logosrc="../sources/dthublogo.png" leads=""></div>
+		<div id="title" logosrc="../sources/dthublogo.png" leads="leads/"></div>
 		<p class="center">
 			<br>
 			<br>
